@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "normal";
+    src: url("../../assets/fonts/normal.otf") format("opentype");
+}
+body {
+    background-color: darkgray;
+}
+* {
+    font-family: "normal", sans-serif;
+    font-size: 16px;
+    font-weight: 0;
+}
