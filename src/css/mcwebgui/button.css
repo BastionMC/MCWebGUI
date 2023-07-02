@@ -8,7 +8,7 @@ mc-button {
     text-align: center;
     font-size: 24px;
     margin-bottom: 4px;
-    background-image: url(../../assets/textures/button_default.png);
+    background-image: url("../../assets/textures/button_default.png");
 }
 mc-button::before {
     height: 48px;
@@ -19,7 +19,7 @@ mc-button::before {
     content: "";
     display: inline-block;
     background-position-y: -48px;
-    background-image: url(../../assets/textures/button_default.png);
+    background-image: url("../../assets/textures/button_default.png");
 }
 mc-button::after {
     height: 48px;
@@ -31,37 +31,37 @@ mc-button::after {
     display: inline-block;
     background-position-y: -48px;
     background-position-x: -4px;
-    background-image: url(../../assets/textures/button_default.png);
+    background-image: url("../../assets/textures/button_default.png");
 }
 mc-button[type|="green"] {
-    background-image: url(../../assets/textures/button_green.png);
+    background-image: url("../../../assets/textures/button_green.png");
     color: white;
 }
 mc-button[type|="green"]::before {
-    background-image: url(../../assets/textures/button_green.png);
+    background-image: url("../../../assets/textures/button_green.png");
 }
 mc-button[type|="green"]::after {
-    background-image: url(../../assets/textures/button_green.png);
+    background-image: url("../../../assets/textures/button_green.png");
 }
 mc-button[type|="purple"] {
-    background-image: url(../../assets/textures/button_purple.png);
+    background-image: url("../../../assets/textures/button_purple.png");
     color: white;
 }
 mc-button[type|="purple"]::before {
-    background-image: url(../../assets/textures/button_purple.png);
+    background-image: url("../../../assets/textures/button_purple.png");
 }
 mc-button[type|="purple"]::after {
-    background-image: url(../../assets/textures/button_purple.png);
+    background-image: url("../../../assets/textures/button_purple.png");
 }
 mc-button[type|="red"] {
-    background-image: url(../../assets/textures/button_red.png);
+    background-image: url("../../../assets/textures/button_red.png");
     color: white;
 }
 mc-button[type|="red"]::before {
-    background-image: url(../../assets/textures/button_red.png);
+    background-image: url("../../../assets/textures/button_red.png");
 }
 mc-button[type|="red"]::after {
-    background-image: url(../../assets/textures/button_red.png);
+    background-image: url("../../../assets/textures/button_red.png");
 }
 mc-button > div {
     display: inline-block;
@@ -100,7 +100,7 @@ mc-button:active::after {
     background-position-y: -240px;
 }
 mc-button[disabled|="true"] {
-    background-image: url(../../assets/textures/button_disabled.png);
+    background-image: url("../../../assets/textures/button_disabled.png");
     color: #48494A;
 }
 mc-button[disabled|="true"] > * {
@@ -108,10 +108,10 @@ mc-button[disabled|="true"] > * {
     bottom: 20px !important;
 }
 mc-button[disabled|="true"]::before {
-    background-image: url(../../assets/textures/button_disabled.png);
+    background-image: url("../../../assets/textures/button_disabled.png");
 }
 mc-button[disabled|="true"]::after {
-    background-image: url(../../assets/textures/button_disabled.png);
+    background-image: url("../../../assets/textures/button_disabled.png");
 }
 mc-button[disabled|="true"]:hover {
     background-position-y: 0px;

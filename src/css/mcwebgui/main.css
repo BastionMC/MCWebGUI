@@ -1,6 +1,6 @@
 @font-face {
     font-family: "normal";
-    src: url("../../assets/fonts/normal.otf") format("opentype");
+    src: url("../../../assets/fonts/normal.otf") format("opentype");
 }
 body {
     background-color: darkgray;
