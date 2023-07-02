@@ -73,13 +73,20 @@ mc-button > div {
 }
 mc-button[type|="green"] > div {
     text-shadow: 2px 2px 0px #2A5D1B;
+    font-family: "title", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    bottom: 18px;
 }
 mc-button[type|="green"]:hover > div {
     text-shadow: 2px 2px 0px #3A7425;
 }
+mc-button[type|="green"]:active > div {
+    text-shadow: none !important;
+    bottom: 14px;
+}
 mc-button:active > div {
     bottom: 16px;
-    text-shadow: none !important;
 }
 mc-button:hover {
     background-position-y: -96px;
@@ -104,8 +111,11 @@ mc-button[disabled|="true"] {
     color: #48494A;
 }
 mc-button[disabled|="true"] > * {
-    text-shadow: none !important;
     bottom: 20px !important;
+}
+mc-button[disabled|="true"][type|="green"] > * {
+    bottom: 18px !important;
+    text-shadow: none !important;
 }
 mc-button[disabled|="true"]::before {
     background-image: url("../../../assets/textures/button_disabled.png");
