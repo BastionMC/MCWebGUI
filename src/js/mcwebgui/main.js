@@ -15,9 +15,9 @@ MCWebGUI.ButtonObjectToElement = function (buttonObject) {
     button.setAttribute("type", buttonInfo.type);
     button.setAttribute("content", buttonInfo.content);
     
-    if (buttonInfo.hasOwnProperty("willCloseDialouge")) {
-        if (buttonInfo.willCloseDialouge) {
-            button.innerHTML = "closeDialouge";
+    if (buttonInfo.hasOwnProperty("close_dialog")) {
+        if (buttonInfo.close_dialog) {
+            button.setAttribute("close_dialog", buttonInfo.close_dialog);
         };
     };
     if (buttonInfo.hasOwnProperty("function")) {

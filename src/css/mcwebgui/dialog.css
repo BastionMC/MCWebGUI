@@ -1,0 +1,9 @@
+.dialogWindow {
+    width: 476px;
+    height: fit-content;
+    background-color: darkgray;
+    height: 48px;
+}
+.dialogWindow > .windowBar {
+    width: calc(100% - 4px);
+}
