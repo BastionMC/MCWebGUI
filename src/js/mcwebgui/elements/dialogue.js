@@ -1,10 +1,11 @@
 let DialogueContainer = document.createElement("div");
+DialogueContainer.id = "dialogueContainer";
 document.body.appendChild(DialogueContainer);
 
 MCWebGUI.Dialogue = {};
 
 MCWebGUI.Dialogue.TextOnly = function (title, content, buttons) {
-    
+    const dialogueButtons = MCWebGUI.ButtonArrayToElements(buttons);
 };
 
 MCWebGUI.ShowDialogue = function (title, contentType, content, buttons) {
