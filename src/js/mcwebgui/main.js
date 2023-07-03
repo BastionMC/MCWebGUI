@@ -10,7 +10,7 @@ document.getElementById("funnyButton").addEventListener("click", function () {
 
 MCWebGUI.ButtonObjectToElement = function (buttonObject) {
     let button = document.createElement("mc-button");
-    const buttonInfo = buttonArray[i];
+    const buttonInfo = buttonObject;
 
     button.setAttribute("type", buttonInfo.type);
     button.setAttribute("content", buttonInfo.content);
