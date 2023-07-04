@@ -13,7 +13,6 @@ mc-input {
 mc-input::before {
     height: 48px;
     width: 4px;
-    display: block;
     image-rendering: pixelated;
     background-size: 8px;
     content: "";
@@ -24,7 +23,6 @@ mc-input::before {
 mc-input::after {
     height: 48px;
     width: 4px;
-    display: block;
     image-rendering: pixelated;
     background-size: 8px;
     content: "";

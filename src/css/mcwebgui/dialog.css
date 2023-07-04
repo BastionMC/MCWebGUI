@@ -5,5 +5,11 @@
     height: 48px;
 }
 .dialogWindow > .windowBar {
-    width: calc(100% - 4px);
+    width: 100%;
+}
+.dialogWindow > div {
+    height: 40px;
+    width: 40px;
+    background-image: url("../../../assets/textures/dialog_close.png");
+    display: inline-block;
 }

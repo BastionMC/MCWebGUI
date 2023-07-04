@@ -13,7 +13,6 @@ mc-button {
 mc-button::before {
     height: 48px;
     width: 4px;
-    display: block;
     image-rendering: pixelated;
     background-size: 8px;
     content: "";
@@ -24,7 +23,6 @@ mc-button::before {
 mc-button::after {
     height: 48px;
     width: 4px;
-    display: block;
     image-rendering: pixelated;
     background-size: 8px;
     content: "";
