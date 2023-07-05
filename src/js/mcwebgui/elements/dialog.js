@@ -22,21 +22,21 @@ MCWebGUI.Dialog.AddNewDialog = function (dialogName, dialogVariable) {
     windowBar.appendChild(dialogClose);
 
     switch (dialogVariable.type) {
-        case "textOnly":
-        case "textWithImage":
-        case "imageWithText":
-        case "imageOnly":
-        case "textWithVideo":
-        case "videoWithText":
-        case "videoOnly":
-        case "textWithInput":
-        case "inputWithText":
-        case "inputOnly":
-        case "customHTML":
+        case "text_only":
+        case "text_image":
+        case "image_text":
+        case "image_only":
+        case "text_video":
+        case "video_text":
+        case "video_only":
+        case "text_input":
+        case "input_text":
+        case "input_only":
+        case "custom_html":
             windowPage.innerHTML = dialogVariable.content;
             break;
         default:
-            console.error(`Error while trying to add new dialog (${dialogName}) to cache: "${dialogVariable.type}" is not a valid dialog type. Defaulted to "customHTML".`)
+            console.error(`Error while trying to add new dialog (${dialogName}) to cache: "${dialogVariable.type}" is not a valid dialog type. Defaulted to "custom_html".`)
             windowPage.innerHTML = dialogVariable.content;
             break;
     };
