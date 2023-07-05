@@ -6,10 +6,12 @@
 }
 .dialogWindow > .windowBar {
     width: 100%;
+    height: 50px;
 }
 .dialogWindow > div {
     height: 40px;
     width: 40px;
     background-image: url("../../../assets/textures/dialog_close.png");
     display: inline-block;
+    background-size: 40px;
 }
