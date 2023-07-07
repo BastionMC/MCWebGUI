@@ -13,12 +13,17 @@ MCWebGUI.Dialog.AddNewDialog = function (dialogName, dialogVariable) {
     let windowPage = newDialog.querySelector(".windowPage");
     let windowButtons = newDialog.querySelector(".windowButtons");
 
-    windowBar.innerHTML = dialogVariable.title;
+    let dialogTitle = document.createElement("div");
+    dialogTitle.className = "windowTitle";
+    dialogTitle.innerHTML = dialogVariable.title;
+    windowBar.appendChild(dialogTitle);
 
     let dialogClose = document.createElement("div");
     dialogClose.addEventListener("click", function () {
         newDialog.close();
+        MCWebGUI.SoundHandler.DialogExit();
     });
+    dialogClose.className = "closeWindow";
     windowBar.appendChild(dialogClose);
 
     switch (dialogVariable.type) {

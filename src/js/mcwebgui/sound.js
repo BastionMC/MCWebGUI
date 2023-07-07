@@ -1,19 +1,26 @@
 MCWebGUI.SoundHandler = {};
 MCWebGUI.Sound = {};
-MCWebGUI.SoundHandler.SoundVolume = 1;
+MCWebGUI.SoundHandler.Volume = {
+    "gui": 1
+};
 
-MCWebGUI.Sound.Button = {};
-MCWebGUI.Sound.Button.ClickSignificantSound = new Audio("assets/sounds/button/significant_click.ogg");
-MCWebGUI.Sound.Button.ClickSignificantSound.volume = MCWebGUI.SoundHandler.SoundVolume;
-MCWebGUI.Sound.Button.ClickSound = new Audio("assets/sounds/button/click.ogg");
+MCWebGUI.Sound.GUI = {};
+MCWebGUI.Sound.GUI.ClickSignificantSound = new Audio("assets/sounds/gui/significant_click.ogg");
+MCWebGUI.Sound.GUI.ClickSignificantSound.volume = MCWebGUI.SoundHandler.Volume.gui;
+MCWebGUI.Sound.GUI.ClickSound = new Audio("assets/sounds/gui/click.ogg");
+MCWebGUI.Sound.GUI.ClickSound.volume = MCWebGUI.SoundHandler.Volume.gui;
 
 MCWebGUI.SoundHandler.ButtonPress = function (buttonConstructorThis) {
     const type = buttonConstructorThis.getAttribute('type');
     const disabled = buttonConstructorThis.getAttribute('disabled');
 
     if (type == "green" && !disabled || type == "purple" && !disabled) {
-        MCWebGUI.Sound.Button.ClickSignificantSound.cloneNode().play();
+        MCWebGUI.Sound.GUI.ClickSignificantSound.cloneNode().play();
     } else if (!disabled) {
-        MCWebGUI.Sound.Button.ClickSound.cloneNode().play();
+        MCWebGUI.Sound.GUI.ClickSound.cloneNode().play();
     };
+};
+
+MCWebGUI.SoundHandler.DialogExit = function () {
+    MCWebGUI.Sound.GUI.ClickSound.cloneNode().play();
 };
