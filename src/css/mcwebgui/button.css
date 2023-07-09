@@ -61,6 +61,16 @@ mc-button[type|="red"]::before {
 mc-button[type|="red"]::after {
     background-image: url("../../../assets/textures/button_red.png");
 }
+mc-button[type|="dark"] {
+    background-image: url("../../../assets/textures/button_dark.png");
+    color: white;
+}
+mc-button[type|="dark"]::before {
+    background-image: url("../../../assets/textures/button_dark.png");
+}
+mc-button[type|="dark"]::after {
+    background-image: url("../../../assets/textures/button_dark.png");
+}
 mc-button > div {
     display: inline-block;
     width: calc(100% - 8px);

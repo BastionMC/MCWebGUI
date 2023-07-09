@@ -14,6 +14,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.dialogWindow::backdrop {
+    background-color: black;
+}
 .dialogWindow > .windowBar {
     width: 476px;
     height: 16px;
