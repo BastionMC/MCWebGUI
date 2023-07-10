@@ -39,16 +39,17 @@ mc-input > input {
     height: 32px;
     text-align: left;
     border: none !important;
+    outline: none !important;
     background-color: transparent;
     color: white;
 }
-mc-input[disabled|=true], mc-input[disabled|="true"] {
+mc-input[disabled|="true"]  {
     color: #48494A;
     background-image: url("../../../assets/textures/input_disabled.png");
 }
-mc-input[disabled|=true]::before, mc-input[disabled|="true"]::before {
+mc-input[disabled|="true"]::before {
     background-image: url("../../../assets/textures/input_disabled.png");
 }
-mc-input[disabled|=true]::after, mc-input[disabled|="true"]::after {
+mc-input[disabled|="true"]::after {
     background-image: url("../../../assets/textures/input_disabled.png");
 }

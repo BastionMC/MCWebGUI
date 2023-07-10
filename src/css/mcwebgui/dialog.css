@@ -1,6 +1,7 @@
 .dialogWindow {
     background-color: transparent;
     border: none;
+    outline: none;
     position: fixed;
     color: white;
     position: fixed;
