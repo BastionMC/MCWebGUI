@@ -1,39 +1,19 @@
 mc-button[tall|="true"] {
     height: 60px;
-    width: 320px;
-    display: inline-block;
-    image-rendering: pixelated;
-    background-size: 8px;
-    color: #1E1E1F;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 4px;
     background-image: url("../../../assets/textures/button_default_tall.png");
 }
 mc-button[tall|="true"]::before {
     height: 60px;
-    width: 4px;
-    image-rendering: pixelated;
-    background-size: 8px;
-    content: "";
-    display: inline-block;
     background-position-y: -60px;
     background-image: url("../../../assets/textures/button_default_tall.png");
 }
 mc-button[tall|="true"]::after {
     height: 60px;
-    width: 4px;
-    image-rendering: pixelated;
-    background-size: 8px;
-    content: "";
-    display: inline-block;
     background-position-y: -60px;
-    background-position-x: -4px;
     background-image: url("../../../assets/textures/button_default_tall.png");
 }
 mc-button[tall|="true"][type|="green"] {
     background-image: url("../../../assets/textures/button_green_tall.png");
-    color: white;
 }
 mc-button[tall|="true"][type|="green"]::before {
     background-image: url("../../../assets/textures/button_green_tall.png");
@@ -43,7 +23,6 @@ mc-button[tall|="true"][type|="green"]::after {
 }
 mc-button[tall|="true"][type|="purple"] {
     background-image: url("../../../assets/textures/button_purple_tall.png");
-    color: white;
 }
 mc-button[tall|="true"][type|="purple"]::before {
     background-image: url("../../../assets/textures/button_purple_tall.png");
@@ -53,7 +32,6 @@ mc-button[tall|="true"][type|="purple"]::after {
 }
 mc-button[tall|="true"][type|="red"] {
     background-image: url("../../../assets/textures/button_red_tall.png");
-    color: white;
 }
 mc-button[tall|="true"][type|="red"]::before {
     background-image: url("../../../assets/textures/button_red_tall.png");
@@ -63,7 +41,6 @@ mc-button[tall|="true"][type|="red"]::after {
 }
 mc-button[tall|="true"][type|="dark"] {
     background-image: url("../../../assets/textures/button_dark_tall.png");
-    color: white;
 }
 mc-button[tall|="true"][type|="dark"]::before {
     background-image: url("../../../assets/textures/button_dark_tall.png");
@@ -72,29 +49,17 @@ mc-button[tall|="true"][type|="dark"]::after {
     background-image: url("../../../assets/textures/button_dark_tall.png");
 }
 mc-button[tall|="true"] > div {
-    display: inline-block;
-    width: calc(100% - 8px);
-    position: relative;
-    bottom: 26px;
+    top: 20px;
     height: 60px;
-    user-select: none;
 }
 mc-button[tall|="true"][type|="green"] > div {
-    text-shadow: 2px 2px 0px #2A5D1B;
-    font-family: "title", sans-serif;
-    font-size: 20px;
-    letter-spacing: 0.7px;
-    bottom: 24px;
-}
-mc-button[tall|="true"][type|="green"]:hover > div {
-    text-shadow: 2px 2px 0px #3A7425;
+    top: 20px;
 }
 mc-button[tall|="true"][type|="green"]:active > div {
-    text-shadow: none !important;
-    bottom: 20px;
+    top: 24px;
 }
 mc-button[tall|="true"]:active > div {
-    bottom: 22px;
+    top: 24px;
 }
 mc-button[tall|="true"]:hover {
     background-position-y: -120px;
@@ -116,14 +81,12 @@ mc-button[tall|="true"]:active::after {
 }
 mc-button[tall|="true"][disabled|="true"] {
     background-image: url("../../../assets/textures/button_disabled_tall.png");
-    color: #48494A;
 }
 mc-button[tall|="true"][disabled|="true"] > * {
-    bottom: 26px !important;
+    top: 20px !important;
 }
 mc-button[tall|="true"][disabled|="true"][type|="green"] > * {
-    bottom: 24px !important;
-    text-shadow: none !important;
+    top: 20px !important;
 }
 mc-button[tall|="true"][disabled|="true"]::before {
     background-image: url("../../../assets/textures/button_disabled_tall.png");

@@ -8,11 +8,7 @@ class McButton extends HTMLElement {
     };
 
     connectedCallback () {
-        if (this.getAttribute("type") == "green") {
-            this.innerHTML = `<div>${this.getAttribute("content").toLowerCase().replace("a","A")}</div>`;
-        } else {
-            this.innerHTML = `<div>${this.getAttribute("content")}</div>`;
-        }
+        this.innerHTML = `<div>${this.getAttribute("content")}</div>`;
         this.removeAttribute("content");
     }
 };

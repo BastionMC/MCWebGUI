@@ -9,6 +9,7 @@ mc-input {
     font-size: 24px;
     margin-bottom: 4px;
     background-image: url("../../../assets/textures/input.png");
+    overflow: hidden;
 }
 mc-input::before {
     height: 48px;

@@ -9,6 +9,8 @@ mc-button {
     font-size: 24px;
     margin-bottom: 4px;
     background-image: url("../../../assets/textures/button_default.png");
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 mc-button::before {
     height: 48px;
@@ -73,28 +75,33 @@ mc-button[type|="dark"]::after {
 }
 mc-button > div {
     display: inline-block;
-    width: calc(100% - 8px);
+    width: calc(100% - 24px);
     position: relative;
-    bottom: 20px;
+    top: -2px;
     height: 32px;
     user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 mc-button[type|="green"] > div {
     text-shadow: 2px 2px 0px #2A5D1B;
     font-family: "title", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.7px;
-    bottom: 18px;
+    top: -2px;
 }
 mc-button[type|="green"]:hover > div {
     text-shadow: 2px 2px 0px #3A7425;
 }
 mc-button[type|="green"]:active > div {
     text-shadow: none !important;
-    bottom: 14px;
+    top: 2px;
 }
 mc-button:active > div {
-    bottom: 16px;
+    top: 2px;
 }
 mc-button:hover {
     background-position-y: -96px;
@@ -119,10 +126,10 @@ mc-button[disabled|="true"] {
     color: #48494A;
 }
 mc-button[disabled|="true"] > * {
-    bottom: 20px !important;
+    top: -2px !important;
 }
 mc-button[disabled|="true"][type|="green"] > * {
-    bottom: 18px !important;
+    top: -2px !important;
     text-shadow: none !important;
 }
 mc-button[disabled|="true"]::before {
