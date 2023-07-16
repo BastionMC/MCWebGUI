@@ -3,6 +3,10 @@
     src: url("../../../assets/fonts/normal.otf") format("opentype");
 }
 @font-face {
+    font-family: "bold";
+    src: url("../../../assets/fonts/bold.otf") format("opentype");
+}
+@font-face {
     font-family: "title";
     src: url("../../../assets/fonts/title.otf") format("opentype");
 }

@@ -1,0 +1,30 @@
+mc-text {
+    height: 16px !important;
+    position: relative;
+}
+mc-text[bold|="true"] {
+    font-family: "bold", sans-serif;
+}
+mc-text[italic|="true"] {
+    font-style: italic;
+}
+mc-text[strikethrough|="true"]::before { /* WARNING: THESE LINES DO NOT MATCH WITH THE TEXT COLOR NOR DO THEY WORK WITH MULTIPLE LINES, TO BE ADDED. */
+    height: 2px;
+    width: calc(100% + 2px);
+    content: "";
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: -1px;
+}
+mc-text[underlined|="true"]::after { /* WARNING: THESE LINES DO NOT MATCH WITH THE TEXT COLOR NOR DO THEY WORK WITH MULTIPLE LINES, TO BE ADDED. */
+    height: 2px;
+    width: calc(100% + 2px);
+    content: "";
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    left: -1px;
+}
