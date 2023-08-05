@@ -10,7 +10,7 @@ class McButton extends HTMLElement {
     connectedCallback () {
         this.innerHTML = `<div>${this.getAttribute("content")}</div>`;
         this.removeAttribute("content");
-    }
+    };
 };
 customElements.define("mc-button", McButton);
 

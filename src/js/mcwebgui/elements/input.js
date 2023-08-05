@@ -1,5 +1,5 @@
 class McInput extends HTMLElement {
-    constructor() {
+    constructor () {
         super();
 
         this.innerHTML = `<input placeholder="${this.getAttribute("placeholder")}"></input>`;

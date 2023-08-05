@@ -7,7 +7,7 @@
     position: fixed;
     background-size: 1904px;
     image-rendering: pixelated;
-    background-image: url("../../../assets/textures/dialog.png");
+    background-image: url("../../../assets/textures/dialog/window.png");
     background-position-x: -476px;
     padding: 0px;
     font-size: 0px;
@@ -27,7 +27,7 @@
     padding-bottom: 17px;
     background-size: 1904px;
     image-rendering: pixelated;
-    background-image: url("../../../assets/textures/dialog.png");
+    background-image: url("../../../assets/textures/dialog/window.png");
 }
 .dialogWindow > .windowBar > .windowTitle {
     width: calc(100% - 92px);
@@ -36,7 +36,7 @@
 .dialogWindow > .windowBar > .closeWindow {
     height: 40px;
     width: 40px;
-    background-image: url("../../../assets/textures/dialog_close.png");
+    background-image: url("../../../assets/textures/dialog/close.png");
     display: inline-block;
     background-size: 40px;
     image-rendering: pixelated;
@@ -68,7 +68,7 @@
     text-align: center;
     background-size: 1904px;
     image-rendering: pixelated;
-    background-image: url("../../../assets/textures/dialog.png");
+    background-image: url("../../../assets/textures/dialog/window.png");
     background-position-x: -1428px;
     font-size: 0px;
     padding-top: 14px;
@@ -80,7 +80,7 @@
     content: "";
     background-size: 1904px;
     image-rendering: pixelated;
-    background-image: url("../../../assets/textures/dialog.png");
+    background-image: url("../../../assets/textures/dialog/window.png");
     background-position-x: -952px;
     display: block;
     position: absolute;
@@ -92,7 +92,7 @@
     content: "";
     background-size: 1904px;
     image-rendering: pixelated;
-    background-image: url("../../../assets/textures/dialog.png");
+    background-image: url("../../../assets/textures/dialog/window.png");
     background-position-x: -952px;
     background-position-y: -42px;
     display: block;

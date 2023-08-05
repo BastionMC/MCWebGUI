@@ -1,52 +1,52 @@
 mc-button[tall|="true"] {
     height: 60px;
-    background-image: url("../../../assets/textures/button_default_tall.png");
+    background-image: url("../../../assets/textures/button/default_tall.png");
 }
 mc-button[tall|="true"]::before {
     height: 60px;
     background-position-y: -60px;
-    background-image: url("../../../assets/textures/button_default_tall.png");
+    background-image: url("../../../assets/textures/button/default_tall.png");
 }
 mc-button[tall|="true"]::after {
     height: 60px;
     background-position-y: -60px;
-    background-image: url("../../../assets/textures/button_default_tall.png");
+    background-image: url("../../../assets/textures/button/default_tall.png");
 }
 mc-button[tall|="true"][type|="green"] {
-    background-image: url("../../../assets/textures/button_green_tall.png");
+    background-image: url("../../../assets/textures/button/green_tall.png");
 }
 mc-button[tall|="true"][type|="green"]::before {
-    background-image: url("../../../assets/textures/button_green_tall.png");
+    background-image: url("../../../assets/textures/button/green_tall.png");
 }
 mc-button[tall|="true"][type|="green"]::after {
-    background-image: url("../../../assets/textures/button_green_tall.png");
+    background-image: url("../../../assets/textures/button/green_tall.png");
 }
 mc-button[tall|="true"][type|="purple"] {
-    background-image: url("../../../assets/textures/button_purple_tall.png");
+    background-image: url("../../../assets/textures/button/purple_tall.png");
 }
 mc-button[tall|="true"][type|="purple"]::before {
-    background-image: url("../../../assets/textures/button_purple_tall.png");
+    background-image: url("../../../assets/textures/button/purple_tall.png");
 }
 mc-button[tall|="true"][type|="purple"]::after {
-    background-image: url("../../../assets/textures/button_purple_tall.png");
+    background-image: url("../../../assets/textures/button/purple_tall.png");
 }
 mc-button[tall|="true"][type|="red"] {
-    background-image: url("../../../assets/textures/button_red_tall.png");
+    background-image: url("../../../assets/textures/button/red_tall.png");
 }
 mc-button[tall|="true"][type|="red"]::before {
-    background-image: url("../../../assets/textures/button_red_tall.png");
+    background-image: url("../../../assets/textures/button/red_tall.png");
 }
 mc-button[tall|="true"][type|="red"]::after {
-    background-image: url("../../../assets/textures/button_red_tall.png");
+    background-image: url("../../../assets/textures/button/red_tall.png");
 }
 mc-button[tall|="true"][type|="dark"] {
-    background-image: url("../../../assets/textures/button_dark_tall.png");
+    background-image: url("../../../assets/textures/button/dark_tall.png");
 }
 mc-button[tall|="true"][type|="dark"]::before {
-    background-image: url("../../../assets/textures/button_dark_tall.png");
+    background-image: url("../../../assets/textures/button/dark_tall.png");
 }
 mc-button[tall|="true"][type|="dark"]::after {
-    background-image: url("../../../assets/textures/button_dark_tall.png");
+    background-image: url("../../../assets/textures/button/dark_tall.png");
 }
 mc-button[tall|="true"] > div {
     top: 20px;
@@ -80,7 +80,7 @@ mc-button[tall|="true"]:active::after {
     background-position-y: -300px;
 }
 mc-button[tall|="true"][disabled|="true"] {
-    background-image: url("../../../assets/textures/button_disabled_tall.png");
+    background-image: url("../../../assets/textures/button/disabled_tall.png");
 }
 mc-button[tall|="true"][disabled|="true"] > * {
     top: 20px !important;
@@ -89,10 +89,10 @@ mc-button[tall|="true"][disabled|="true"][type|="green"] > * {
     top: 20px !important;
 }
 mc-button[tall|="true"][disabled|="true"]::before {
-    background-image: url("../../../assets/textures/button_disabled_tall.png");
+    background-image: url("../../../assets/textures/button/disabled_tall.png");
 }
 mc-button[tall|="true"][disabled|="true"]::after {
-    background-image: url("../../../assets/textures/button_disabled_tall.png");
+    background-image: url("../../../assets/textures/button/disabled_tall.png");
 }
 mc-button[tall|="true"][disabled|="true"]:hover {
     background-position-y: 0px;

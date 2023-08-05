@@ -8,7 +8,7 @@ mc-text[bold|="true"] {
 mc-text[italic|="true"] {
     font-style: italic;
 }
-mc-text[strikethrough|="true"]::before { /* WARNING: THESE LINES DO NOT MATCH WITH THE TEXT COLOR NOR DO THEY WORK WITH MULTIPLE LINES, TO BE ADDED. */
+mc-text[strikethrough|="true"]::before { /* WARNING: THESE LINES DO NOT MATCH WITH THE TEXT COLOR, NOR DO THEY WORK WITH MULTIPLE LINES; TO BE ADDED. */
     height: 2px;
     width: calc(100% + 2px);
     content: "";
@@ -18,7 +18,7 @@ mc-text[strikethrough|="true"]::before { /* WARNING: THESE LINES DO NOT MATCH WI
     top: 8px;
     left: -1px;
 }
-mc-text[underlined|="true"]::after { /* WARNING: THESE LINES DO NOT MATCH WITH THE TEXT COLOR NOR DO THEY WORK WITH MULTIPLE LINES, TO BE ADDED. */
+mc-text[underlined|="true"]::after { /* WARNING: THESE LINES DO NOT MATCH WITH THE TEXT COLOR, NOR DO THEY WORK WITH MULTIPLE LINES; TO BE ADDED. */
     height: 2px;
     width: calc(100% + 2px);
     content: "";

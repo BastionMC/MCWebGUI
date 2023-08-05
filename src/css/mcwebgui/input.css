@@ -8,7 +8,7 @@ mc-input {
     text-align: center;
     font-size: 24px;
     margin-bottom: 4px;
-    background-image: url("../../../assets/textures/input.png");
+    background-image: url("../../../assets/textures/input/normal.png");
     overflow: hidden;
 }
 mc-input::before {
@@ -19,7 +19,7 @@ mc-input::before {
     content: "";
     display: inline-block;
     background-position-y: -48px;
-    background-image: url("../../../assets/textures/input.png");
+    background-image: url("../../../assets/textures/input/normal.png");
 }
 mc-input::after {
     height: 48px;
@@ -30,7 +30,7 @@ mc-input::after {
     display: inline-block;
     background-position-y: -48px;
     background-position-x: -4px;
-    background-image: url("../../../assets/textures/input.png");
+    background-image: url("../../../assets/textures/input/normal.png");
 }
 mc-input > input {
     display: inline-block;
@@ -46,11 +46,11 @@ mc-input > input {
 }
 mc-input[disabled|="true"]  {
     color: #48494A;
-    background-image: url("../../../assets/textures/input_disabled.png");
+    background-image: url("../../../assets/textures/input/disabled.png");
 }
 mc-input[disabled|="true"]::before {
-    background-image: url("../../../assets/textures/input_disabled.png");
+    background-image: url("../../../assets/textures/input/disabled.png");
 }
 mc-input[disabled|="true"]::after {
-    background-image: url("../../../assets/textures/input_disabled.png");
+    background-image: url("../../../assets/textures/input/disabled.png");
 }
