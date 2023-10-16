@@ -1,0 +1,72 @@
+*:has(.nine-grid) {
+    --non-repeating-y-offset: 0px;
+    --background-y: 24px;
+
+    --vertical-x-offset: 0px;
+    --horizontal-y-offset: 0px;
+}
+
+.nine-grid {
+    display: grid;
+    grid-template-rows: calc(4px * var(--pixel-size)) calc(100% - calc(8px * var(--pixel-size))) calc(4px * var(--pixel-size));
+    grid-template-columns: calc(4px * var(--pixel-size)) calc(100% - calc(8px * var(--pixel-size))) calc(4px * var(--pixel-size));
+}
+.nine-grid > * {
+    height: 100%;
+    width: 100%;
+}
+
+.nine-grid > span:nth-child(1) {
+    background-image: var(--non-repeating-asset);
+    background-size: calc(8px * var(--pixel-size));
+    background-position-y: calc(var(--non-repeating-y-offset) * var(--pixel-size) * -1);
+}
+.nine-grid > span:nth-child(3) {
+    background-image: var(--non-repeating-asset);
+    background-size: calc(8px * var(--pixel-size));
+    background-position-y: calc(var(--non-repeating-y-offset) * var(--pixel-size) * -1);
+    background-position-x: calc(-4px * var(--pixel-size));
+}
+.nine-grid > span:nth-child(7) {
+    background-image: var(--non-repeating-asset);
+    background-size: calc(8px * var(--pixel-size));
+    background-position-y: calc(-4px * var(--pixel-size) + var(--non-repeating-y-offset) * var(--pixel-size) * -1);
+}
+.nine-grid > span:nth-child(9) {
+    background-image: var(--non-repeating-asset);
+    background-size: calc(8px * var(--pixel-size));
+    background-position-y: calc(-4px * var(--pixel-size) + var(--non-repeating-y-offset) * var(--pixel-size) * -1);
+    background-position-x: calc(-4px * var(--pixel-size));
+}
+
+.nine-grid > span:nth-child(2) {
+    background-image: var(--horizontally-repeating-asset);
+    background-size: calc(4px * var(--pixel-size));
+    background-position-y: calc(var(--horizontal-y-offset) * var(--pixel-size) * -1);
+    background-repeat: repeat-x;
+}
+.nine-grid > span:nth-child(8) {
+    background-image: var(--horizontally-repeating-asset);
+    background-size: calc(4px * var(--pixel-size));
+    background-position-y: calc(-4px * var(--pixel-size) + var(--horizontal-y-offset) * var(--pixel-size) * -1);
+    background-repeat: repeat-x;
+}
+
+.nine-grid > span:nth-child(4) {
+    background-image: var(--vertically-repeating-asset);
+    background-size: auto calc(4px * var(--pixel-size));
+    background-position-x: calc(var(--vertical-x-offset) * var(--pixel-size) * -1);
+    background-repeat: repeat-y;
+}
+.nine-grid > span:nth-child(6) {
+    background-image: var(--vertically-repeating-asset);
+    background-size: auto calc(4px * var(--pixel-size));
+    background-position-x: calc(-4px * var(--pixel-size) + var(--vertical-x-offset) * var(--pixel-size) * -1);
+    background-repeat: repeat-y;
+}
+
+.nine-grid > span:nth-child(5) {
+    background-image: var(--non-repeating-asset);
+    background-size: calc(8px * 640);
+    background-position-y: calc(var(--background-y) * -640);
+}

@@ -1,0 +1,13 @@
+* {
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+body {
+    display: flex;
+    gap: 8px;
+    margin: 8px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,32 @@
+mc-input {
+    --non-repeating-asset: url("../../../assets/input/input.png");
+    --vertically-repeating-asset: url("../../../assets/input/input_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/input/input_horizontal.png");
+
+    display: block;
+}
+
+mc-input,
+mc-input > * {
+    width: calc(160px * var(--pixel-size));
+    max-width: calc(160px * var(--pixel-size));
+    height: calc(24px * var(--pixel-size));
+    max-height: calc(160px * var(--pixel-size));
+
+    border: none;
+    padding: 0px;
+    --background-y: 8px;
+}
+mc-input:has(input[disabled|="true"]) > * {
+    --non-repeating-asset: url("../../../assets/input/disabled.png");
+    --vertically-repeating-asset: url("../../../assets/input/disabled_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/input/disabled_horizontal.png");
+    
+    --background-y: 8px;
+}
+
+mc-input > input {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+}

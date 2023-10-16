@@ -1,0 +1,6 @@
+* {
+    --pixel-size: 2;
+    --outline-color: #1E1E1F;
+    --outline-thickness: calc(1px * var(--pixel-size));
+    --spacing-gap: calc(8px * var(--pixel-size))
+}

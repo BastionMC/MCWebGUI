@@ -1,0 +1,73 @@
+mc-button {
+    --non-repeating-asset: url("../../../assets/button/bland.png");
+    --vertically-repeating-asset: url("../../../assets/button/bland_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/button/bland_horizontal.png");
+
+    display: block;
+}
+
+mc-button,
+mc-button > * {
+    width: calc(160px * var(--pixel-size));
+    max-width: calc(160px * var(--pixel-size));
+    height: calc(24px * var(--pixel-size));
+    max-height: calc(160px * var(--pixel-size));
+
+    border: none;
+    padding: 0px;
+}
+mc-button > *:hover {
+    --non-repeating-y-offset: 8px;
+    --background-y: 28px;
+
+    --vertical-x-offset: 8px;
+    --horizontal-y-offset: 8px;
+}
+mc-button > *:active {
+    --non-repeating-y-offset: 16px;
+    --background-y: 32px;
+
+    --vertical-x-offset: 16px;
+    --horizontal-y-offset: 16px;
+}
+mc-button[color|="green"] {
+    --non-repeating-asset: url("../../../assets/button/green.png");
+    --vertically-repeating-asset: url("../../../assets/button/green_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/button/green_horizontal.png");
+}
+mc-button[color|="red"] {
+    --non-repeating-asset: url("../../../assets/button/red.png");
+    --vertically-repeating-asset: url("../../../assets/button/red_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/button/red_horizontal.png");
+}
+mc-button[color|="purple"] {
+    --non-repeating-asset: url("../../../assets/button/purple.png");
+    --vertically-repeating-asset: url("../../../assets/button/purple_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/button/purple_horizontal.png");
+}
+mc-button[color|="dark"] {
+    --non-repeating-asset: url("../../../assets/button/dark.png");
+    --vertically-repeating-asset: url("../../../assets/button/dark_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/button/dark_horizontal.png");
+}
+mc-button > *[disabled|="true"] {
+    --non-repeating-asset: url("../../../assets/button/disabled.png");
+    --vertically-repeating-asset: url("../../../assets/button/disabled_vertical.png");
+    --horizontally-repeating-asset: url("../../../assets/button/disabled_horizontal.png");
+    
+    --background-y: 8px;
+}
+mc-button > *[disabled|="true"]:hover {
+    --non-repeating-y-offset: 0px;
+    --background-y: 8px;
+
+    --vertical-x-offset: 0px;
+    --horizontal-y-offset: 0px;
+}
+mc-button > *[disabled|="true"]:active {
+    --non-repeating-y-offset: 0px;
+    --background-y: 8px;
+
+    --vertical-x-offset: 0px;
+    --horizontal-y-offset: 0px;
+}
