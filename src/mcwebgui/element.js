@@ -1,0 +1,1 @@
+MCWebGUI.Element = {};

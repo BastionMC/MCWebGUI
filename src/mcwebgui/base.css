@@ -11,3 +11,6 @@ body {
     margin: 8px;
     flex-wrap: wrap;
 }
+desktop {
+    display: none;
+}

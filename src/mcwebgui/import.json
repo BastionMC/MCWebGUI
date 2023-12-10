@@ -1,0 +1,24 @@
+{
+    "scripts": [
+        "src/mcwebgui/configurable.js",
+        "src/mcwebgui/main.js",
+        "src/mcwebgui/element.js",
+
+        "src/mcwebgui/element/button.js",
+        "src/mcwebgui/element/input.js",
+        "src/mcwebgui/element/switch.js",
+        "src/mcwebgui/element/slider.js"
+    ],
+    "desktop_scripts": [
+    ],
+    "stylesheets": [
+        "src/mcwebgui/configurable.css",
+        "src/mcwebgui/base.css",
+        "src/mcwebgui/grid.css",
+
+        "src/mcwebgui/element/button.css",
+        "src/mcwebgui/element/input.css",
+        "src/mcwebgui/element/switch.css",
+        "src/mcwebgui/element/slider.css"
+    ]
+}

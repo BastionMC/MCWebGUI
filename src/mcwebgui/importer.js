@@ -3,38 +3,27 @@ function MCWebGUILog (context, contextColor, message) {
 };
 
 const MCWebGUIImporter = {
-    "Desktop": document.querySelector('desktop') !== null,
-    "Scripts": [
-        "src/mcwebgui/configurable.js",
-        "src/mcwebgui/main.js",
-        "src/mcwebgui/element.js",
-
-        "src/mcwebgui/element/button.js",
-        "src/mcwebgui/element/input.js"
-    ],
-    "Stylesheets": [
-        "src/mcwebgui/configurable.css",
-        "src/mcwebgui/base.css",
-        "src/mcwebgui/grid.css",
-
-        "src/mcwebgui/element/button.css",
-        "src/mcwebgui/element/input.css"
-    ]
+    "Desktop": document.querySelector("desktop") !== null
 };
+
+import MCWebGUIImporterList from "./import.json" assert {type: "json"};
 
 if (MCWebGUIImporter.Desktop) {
-    MCWebGUILog("Importer", "orange", "Switching to Desktop mode!");
+    MCWebGUILog("Importer", "orange", "Loading in Desktop-associated files.");
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    for (let i=0; i<MCWebGUIImporter.Scripts.length; i++) {
+document.addEventListener("DOMContentLoaded", function () {
+    for (let i=0; i<MCWebGUIImporterList.scripts.length; i++) {
         let script = document.createElement("script");
-        script.src = MCWebGUIImporter.Scripts[i];
+        script.src = MCWebGUIImporterList.scripts[i];
+        script.id = "mcwebgui-script";
         document.body.appendChild(script);
     };
+
     let stylesheets = document.createElement("style");
-    for (let i=0; i<MCWebGUIImporter.Stylesheets.length; i++) {
-        stylesheets.textContent += "@import url(" + MCWebGUIImporter.Stylesheets[i] + ");";
+    for (let i=0; i<MCWebGUIImporterList.stylesheets.length; i++) {
+        stylesheets.textContent += "@import url(" + MCWebGUIImporterList.stylesheets[i] + ");";
     };
+    stylesheets.id = "mcwebgui-stylesheets"
     document.head.appendChild(stylesheets);
 });

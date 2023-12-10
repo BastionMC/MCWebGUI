@@ -1,7 +1,7 @@
 mc-input {
-    --non-repeating-asset: url("../../../assets/input/input.png");
-    --vertically-repeating-asset: url("../../../assets/input/input_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/input/input_horizontal.png");
+    --non-repeating: url("../../../assets/input/input.png");
+    --vertically-repeating: url("../../../assets/input/input_vertical.png");
+    --horizontally-repeating: url("../../../assets/input/input_horizontal.png");
 
     display: block;
 }
@@ -18,9 +18,9 @@ mc-input > * {
     --background-y: 8px;
 }
 mc-input:has(input[disabled|="true"]) > * {
-    --non-repeating-asset: url("../../../assets/input/disabled.png");
-    --vertically-repeating-asset: url("../../../assets/input/disabled_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/input/disabled_horizontal.png");
+    --non-repeating: url("../../../assets/input/disabled.png");
+    --vertically-repeating: url("../../../assets/input/disabled_vertical.png");
+    --horizontally-repeating: url("../../../assets/input/disabled_horizontal.png");
     
     --background-y: 8px;
 }

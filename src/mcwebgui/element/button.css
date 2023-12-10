@@ -1,7 +1,7 @@
 mc-button {
-    --non-repeating-asset: url("../../../assets/button/bland.png");
-    --vertically-repeating-asset: url("../../../assets/button/bland_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/button/bland_horizontal.png");
+    --non-repeating: url("../../../assets/button/bland.png");
+    --vertically-repeating: url("../../../assets/button/bland_vertical.png");
+    --horizontally-repeating: url("../../../assets/button/bland_horizontal.png");
 
     display: block;
 }
@@ -31,29 +31,29 @@ mc-button > *:active {
     --horizontal-y-offset: 16px;
 }
 mc-button[color|="green"] {
-    --non-repeating-asset: url("../../../assets/button/green.png");
-    --vertically-repeating-asset: url("../../../assets/button/green_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/button/green_horizontal.png");
+    --non-repeating: url("../../../assets/button/green.png");
+    --vertically-repeating: url("../../../assets/button/green_vertical.png");
+    --horizontally-repeating: url("../../../assets/button/green_horizontal.png");
 }
 mc-button[color|="red"] {
-    --non-repeating-asset: url("../../../assets/button/red.png");
-    --vertically-repeating-asset: url("../../../assets/button/red_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/button/red_horizontal.png");
+    --non-repeating: url("../../../assets/button/red.png");
+    --vertically-repeating: url("../../../assets/button/red_vertical.png");
+    --horizontally-repeating: url("../../../assets/button/red_horizontal.png");
 }
 mc-button[color|="purple"] {
-    --non-repeating-asset: url("../../../assets/button/purple.png");
-    --vertically-repeating-asset: url("../../../assets/button/purple_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/button/purple_horizontal.png");
+    --non-repeating: url("../../../assets/button/purple.png");
+    --vertically-repeating: url("../../../assets/button/purple_vertical.png");
+    --horizontally-repeating: url("../../../assets/button/purple_horizontal.png");
 }
 mc-button[color|="dark"] {
-    --non-repeating-asset: url("../../../assets/button/dark.png");
-    --vertically-repeating-asset: url("../../../assets/button/dark_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/button/dark_horizontal.png");
+    --non-repeating: url("../../../assets/button/dark.png");
+    --vertically-repeating: url("../../../assets/button/dark_vertical.png");
+    --horizontally-repeating: url("../../../assets/button/dark_horizontal.png");
 }
 mc-button > *[disabled|="true"] {
-    --non-repeating-asset: url("../../../assets/button/disabled.png");
-    --vertically-repeating-asset: url("../../../assets/button/disabled_vertical.png");
-    --horizontally-repeating-asset: url("../../../assets/button/disabled_horizontal.png");
+    --non-repeating: url("../../../assets/button/disabled.png");
+    --vertically-repeating: url("../../../assets/button/disabled_vertical.png");
+    --horizontally-repeating: url("../../../assets/button/disabled_horizontal.png");
     
     --background-y: 8px;
 }
@@ -70,4 +70,11 @@ mc-button > *[disabled|="true"]:active {
 
     --vertical-x-offset: 0px;
     --horizontal-y-offset: 0px;
+}
+
+mc-button[tall|="true"] {
+    height: calc(30px * var(--pixel-size));
+}
+mc-button[tall|="true"] > * {
+    height: inherit;
 }
