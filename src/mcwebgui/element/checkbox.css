@@ -1,0 +1,99 @@
+mc-switch {
+    --knob: url("../../../assets/switch/knob.png");
+    --slider: url("../../../assets/switch/slider.png");
+    --disabled-off: url("../../../assets/switch/disabled_off.png");
+    --disabled-on: url("../../../assets/switch/disabled_on.png");
+
+    display: block;
+    background-image: var(--slider);
+}
+
+mc-switch,
+mc-switch > input {
+    width: calc(32px * var(--pixel-size));
+    max-width: calc(32px * var(--pixel-size));
+    height: calc(16px * var(--pixel-size));
+    max-height: calc(16px * var(--pixel-size));
+
+    background-size: calc(32px * var(--pixel-size));
+
+    border: none;
+    padding: 0px;
+
+    z-index: 1;
+}
+mc-switch > * {
+    position: relative;
+    display: block;
+}
+mc-switch > input {
+    opacity: 0;
+}
+
+mc-switch > span {
+    width: calc(16px * var(--pixel-size));
+    max-width: calc(16px * var(--pixel-size));
+    height: calc(16px * var(--pixel-size));
+    max-height: calc(16px * var(--pixel-size));
+    background-size: calc(32px * var(--pixel-size));
+
+    background-image: var(--knob); 
+    top: calc(-16px * var(--pixel-size));
+    left: calc(1px * var(--pixel-size));
+}
+mc-switch:has(input:hover) > span {
+    background-position-x: calc(-16px * var(--pixel-size));
+}
+
+mc-switch:has(:not(input:checked)) > span {
+    animation: switch-off 0.25s steps(1);
+}
+mc-switch:has(input:checked) > span {
+    left: calc(15px * var(--pixel-size));
+    animation: switch-on 0.25s steps(1);
+}
+
+@keyframes switch-on {
+    0% {
+        left: calc(1px * var(--pixel-size));
+    }
+    12.5% {
+        left: calc(2px * var(--pixel-size));
+    }
+    25% {
+        left: calc(4px * var(--pixel-size));
+    }
+    37.5%, 62.5% {
+        left: calc(16px * var(--pixel-size));
+    }
+    50%, 75%, 87.5%, 100% {
+        left: calc(15px * var(--pixel-size));
+    }
+}
+@keyframes switch-off {
+    0% {
+        left: calc(15px * var(--pixel-size));
+    }
+    12.5% {
+        left: calc(14px * var(--pixel-size));
+    }
+    25% {
+        left: calc(12px * var(--pixel-size));
+    }
+    37.5%, 62.5% {
+        left: calc(0px * var(--pixel-size));
+    }
+    50%, 75%, 87.5%, 100% {
+        left: calc(1px * var(--pixel-size));
+    }
+}
+
+mc-switch[disabled|="true"]:has(input[disabled|="true"]) > span {
+    display: none;
+}
+mc-switch[disabled|="true"]:has(input[disabled|="true"]:not(:checked)) {
+    background-image: var(--disabled-off);
+}
+mc-switch[disabled|="true"]:has(input[disabled|="true"]:checked) {
+    background-image: var(--disabled-on);
+}
