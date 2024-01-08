@@ -14,7 +14,7 @@ mc-checkbox > input {
     height: calc(12px * var(--pixel-size));
     max-height: calc(12px * var(--pixel-size));
 
-    background-size: calc(12px * var(--pixel-size));
+    background-size: calc(24px * var(--pixel-size));
 
     border: none;
     padding: 0px;
@@ -45,8 +45,9 @@ mc-checkbox:has(input:checked) {
 
 mc-checkbox[disabled|="true"]:has(input[disabled|="true"]:not(:checked)) {
     background-image: var(--disabled);
+    background-position-y: calc(0px * var(--pixel-size));
 }
 mc-checkbox[disabled|="true"]:has(input[disabled|="true"]:checked) {
     background-image: var(--disabled);
-    background-position-x: calc(0px * var(--pixel-size));
+    background-position-y: calc(0px * var(--pixel-size));
 }
