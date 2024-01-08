@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i=0; i<MCWebGUIImporterList.stylesheets.length; i++) {
         stylesheets.textContent += "@import url(" + MCWebGUIImporterList.stylesheets[i] + ");";
     };
-    stylesheets.id = "mcwebgui-stylesheets"
+    stylesheets.id = "mcwebgui-stylesheets";
     document.head.appendChild(stylesheets);
 });

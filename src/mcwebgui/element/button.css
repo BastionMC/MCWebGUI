@@ -6,8 +6,7 @@ mc-button {
     display: block;
 }
 
-mc-button,
-mc-button > * {
+mc-button {
     width: calc(160px * var(--pixel-size));
     max-width: calc(160px * var(--pixel-size));
     height: calc(24px * var(--pixel-size));
@@ -16,14 +15,28 @@ mc-button > * {
     border: none;
     padding: 0px;
 }
-mc-button > *:hover {
+mc-button > button {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    padding: 0px;
+}
+mc-button > button > span {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+mc-button > button:hover > span {
     --non-repeating-y-offset: 8px;
     --background-y: 28px;
 
     --vertical-x-offset: 8px;
     --horizontal-y-offset: 8px;
 }
-mc-button > *:active {
+mc-button > button:active > span {
     --non-repeating-y-offset: 16px;
     --background-y: 32px;
 
