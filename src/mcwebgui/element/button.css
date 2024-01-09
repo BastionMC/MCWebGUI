@@ -33,18 +33,25 @@ mc-button > button > span.nine-grid {
 mc-button > button > span.text {
     position: absolute;
     font-size: calc(8px * var(--pixel-size));
-    font-family: "mc-seven";
+    font-family: "mc-seven";text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 mc-button[color|="green"] > button > span.text {
-    color: white;
     font-size: calc(12px * var(--pixel-size));
     font-family: "mc-ten";
 }
 
+mc-button[color|="green"] > button > span.text,
 mc-button[color|="purple"] > button > span.text,
-mc-button[color|="red"] > button > span.text {
+mc-button[color|="red"] > button > span.text,
+mc-button[color|="dark"] > button > span.text {
     color: white;
+}
+
+mc-button[disabled|="true"] > button[disabled|="true"] > span.text {
+    color: #48494A;
 }
 
 mc-button > button:hover > span.nine-grid {
