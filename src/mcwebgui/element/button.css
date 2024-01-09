@@ -21,10 +21,30 @@ mc-button > button {
 
     border: none;
     padding: 0px;
+    
+    display: flex;
+    justify-content: center;
 }
 mc-button > button > span.nine-grid {
     width: 100%;
     height: 100%;
+}
+
+mc-button > button > span.text {
+    position: absolute;
+    font-size: calc(8px * var(--pixel-size));
+    font-family: "mc-seven";
+}
+
+mc-button[color|="green"] > button > span.text {
+    color: white;
+    font-size: calc(12px * var(--pixel-size));
+    font-family: "mc-ten";
+}
+
+mc-button[color|="purple"] > button > span.text,
+mc-button[color|="red"] > button > span.text {
+    color: white;
 }
 
 mc-button > button:hover > span.nine-grid {
@@ -88,10 +108,4 @@ mc-button[tall|="true"] {
 }
 mc-button[tall|="true"] > * {
     height: inherit;
-}
-
-mc-button > button > span.text {
-    background-color: red;
-    position: absolute;
-    font-size: 16px;
 }
