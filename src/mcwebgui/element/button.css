@@ -22,21 +22,19 @@ mc-button > button {
     border: none;
     padding: 0px;
 }
-mc-button > button > span {
+mc-button > button > span.nine-grid {
     width: 100%;
     height: 100%;
 }
 
-
-
-mc-button > button:hover > span {
+mc-button > button:hover > span.nine-grid {
     --non-repeating-y-offset: 8px;
     --background-y: 28px;
 
     --vertical-x-offset: 8px;
     --horizontal-y-offset: 8px;
 }
-mc-button > button:active > span {
+mc-button > button:active > span.nine-grid {
     --non-repeating-y-offset: 16px;
     --background-y: 32px;
 
@@ -70,14 +68,14 @@ mc-button > *[disabled|="true"] {
     
     --background-y: 8px;
 }
-mc-button > *[disabled|="true"]:hover {
+mc-button[disabled|="true"] > button[disabled|="true"]:hover > span.nine-grid {
     --non-repeating-y-offset: 0px;
     --background-y: 8px;
 
     --vertical-x-offset: 0px;
     --horizontal-y-offset: 0px;
 }
-mc-button > *[disabled|="true"]:active {
+mc-button[disabled|="true"] > button[disabled|="true"]:active > span.nine-grid {
     --non-repeating-y-offset: 0px;
     --background-y: 8px;
 
@@ -90,4 +88,10 @@ mc-button[tall|="true"] {
 }
 mc-button[tall|="true"] > * {
     height: inherit;
+}
+
+mc-button > button > span.text {
+    background-color: red;
+    position: absolute;
+    font-size: 16px;
 }

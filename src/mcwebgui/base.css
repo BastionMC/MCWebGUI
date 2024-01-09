@@ -14,3 +14,20 @@ body {
 desktop {
     display: none;
 }
+
+@font-face {
+    font-family: "mc-five";
+    src: url("fonts/five.otf") format("opentype");
+}
+@font-face {
+    font-family: "mc-five-bold";
+    src: url("fonts/five_bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "mc-seven";
+    src: url("fonts/seven.otf") format("opentype");
+}
+@font-face {
+    font-family: "mc-ten";
+    src: url("fonts/ten.otf") format("opentype");
+}
