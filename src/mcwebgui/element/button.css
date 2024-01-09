@@ -31,16 +31,32 @@ mc-button > button > span.nine-grid {
 }
 
 mc-button > button > span.text {
-    position: absolute;
     font-size: calc(8px * var(--pixel-size));
-    font-family: "mc-seven";text-overflow: ellipsis;
+    font-family: "mc-seven";
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    position: absolute;
+    transform: translateY(calc(7px * var(--pixel-size)));
 }
-
+mc-button > button:active > span.text {
+    transform: translateY(calc(9px * var(--pixel-size)));
+}
+mc-button[disabled|="true"] > button:active[disabled|="true"] > span.text {
+    transform: translateY(calc(7px * var(--pixel-size)));
+}
 mc-button[color|="green"] > button > span.text {
     font-size: calc(12px * var(--pixel-size));
     font-family: "mc-ten";
+    transform: translateY(calc(3px * var(--pixel-size)));
+}
+mc-button[color|="green"] > button:active > span.text {
+    font-size: calc(12px * var(--pixel-size));
+    font-family: "mc-ten";
+    transform: translateY(calc(5px * var(--pixel-size)));
+}
+mc-button[color|="green"][disabled|="true"] > button:active[disabled|="true"] > span.text {
+    transform: translateY(calc(3px * var(--pixel-size)));
 }
 
 mc-button[color|="green"] > button > span.text,
@@ -115,4 +131,31 @@ mc-button[tall|="true"] {
 }
 mc-button[tall|="true"] > * {
     height: inherit;
+}
+mc-button[tall|="true"] > button > span.text {
+    font-size: calc(8px * var(--pixel-size));
+    font-family: "mc-seven";text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(calc(7px * var(--pixel-size)));
+}
+mc-button[tall|="true"] > button:active > span.text {
+    transform: translateY(calc(9px * var(--pixel-size)));
+}
+mc-button[tall|="true"][disabled|="true"] > button:active[disabled|="true"] > span.text {
+    transform: translateY(calc(7px * var(--pixel-size)));
+}
+mc-button[tall|="true"][color|="green"] > button > span.text {
+    font-size: calc(12px * var(--pixel-size));
+    font-family: "mc-ten";
+    transform: translateY(calc(3px * var(--pixel-size)));
+}
+mc-button[tall|="true"][color|="green"] > button:active > span.text {
+    font-size: calc(12px * var(--pixel-size));
+    font-family: "mc-ten";
+    transform: translateY(calc(5px * var(--pixel-size)));
+}
+mc-button[tall|="true"][color|="green"][disabled|="true"] > button:active[disabled|="true"] > span.text {
+    transform: translateY(calc(3px * var(--pixel-size)));
 }
