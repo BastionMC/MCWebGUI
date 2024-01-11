@@ -141,7 +141,7 @@ mc-button[tall|="true"] > button:active > span.text {
     transform: translateY(calc(12px * var(--pixel-size)));
 }
 mc-button[tall|="true"][disabled|="true"] > button:active[disabled|="true"] > span.text {
-    transform: translateY(calc(12px * var(--pixel-size))) !important;
+    transform: translateY(calc(10px * var(--pixel-size)));
 }
 mc-button[tall|="true"][color|="green"] > button > span.text {
     transform: translateY(calc(6px * var(--pixel-size)));
