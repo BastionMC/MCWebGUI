@@ -31,11 +31,7 @@ mc-button > button > span.nine-grid {
 }
 
 mc-button > button > span.text {
-    font-size: calc(8px * var(--pixel-size));
     font-family: "mc-seven";
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     position: absolute;
     transform: translateY(calc(7px * var(--pixel-size)));
 }
@@ -49,11 +45,16 @@ mc-button[color|="green"] > button > span.text {
     font-size: calc(12px * var(--pixel-size));
     font-family: "mc-ten";
     transform: translateY(calc(3px * var(--pixel-size)));
+    text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #2A5D1B;
+}
+mc-button[color|="green"] > button:hover > span.text {
+    text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #1D4614;
 }
 mc-button[color|="green"] > button:active > span.text {
     font-size: calc(12px * var(--pixel-size));
     font-family: "mc-ten";
     transform: translateY(calc(5px * var(--pixel-size)));
+    text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #14360D;
 }
 mc-button[color|="green"][disabled|="true"] > button:active[disabled|="true"] > span.text {
     transform: translateY(calc(3px * var(--pixel-size)));
@@ -124,6 +125,9 @@ mc-button[disabled|="true"] > button[disabled|="true"]:active > span.nine-grid {
 
     --vertical-x-offset: 0px;
     --horizontal-y-offset: 0px;
+}
+mc-button[disabled|="true"][color|="green"] > button > span.text {
+    text-shadow: none;
 }
 
 /* TODO: Fix this scheiße by tommorrow */
