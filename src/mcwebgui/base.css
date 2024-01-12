@@ -32,3 +32,8 @@ desktop {
     font-family: "mc-ten";
     src: url("fonts/ten.otf") format("opentype");
 }
+
+input {
+    border: none;
+    outline: none;
+}

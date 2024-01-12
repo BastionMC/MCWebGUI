@@ -26,7 +26,14 @@ mc-input:has(input[disabled|="true"]) > * {
 }
 
 mc-input > input {
-    position: absolute;
     height: inherit;
-    width: inherit;
+    width: calc(100% - calc(32px * var(--pixel-size)));
+    caret-color: #4F913C;
+    font-family: "mc-seven";
+    color: white;
+    padding-left: calc(8px * var(--pixel-size));
+    padding-right: calc(8px * var(--pixel-size));
+}
+mc-input > input::selection {
+    background: #4F913C;
 }
