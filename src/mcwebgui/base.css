@@ -38,3 +38,24 @@ input {
     border: none;
     outline: none;
 }
+
+h1 {
+    font-size: calc(16px * var(--pixel-size));
+    font-family: "mc-ten";
+}
+h2, h3 {
+    font-size: calc(12px * var(--pixel-size));
+    font-family: "mc-ten";
+}
+h4 {
+    font-size: calc(8px * var(--pixel-size));
+    font-family: "mc-seven";
+}
+h5 {
+    font-size: calc(6px * var(--pixel-size));
+    font-family: "mc-five-bold";
+}
+h6 {
+    font-size: calc(6px * var(--pixel-size));
+    font-family: "mc-five";
+}
