@@ -4,13 +4,15 @@ mc-button {
     --horizontally-repeating: url("../../../assets/button/bland_horizontal.png");
 
     display: block;
+
+    --width: 160px
 }
 
 mc-button {
-    width: calc(160px * var(--pixel-size));
-    max-width: calc(160px * var(--pixel-size));
+    width: calc(var(--width) * var(--pixel-size));
+    max-width: calc(var(--width) * var(--pixel-size));
     height: calc(24px * var(--pixel-size));
-    max-height: calc(160px * var(--pixel-size));
+    max-height: calc(var(--width) * var(--pixel-size));
 
     border: none;
     padding: 0px;
