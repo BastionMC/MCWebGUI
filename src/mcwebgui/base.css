@@ -5,6 +5,7 @@
     margin: 0px;
     background-color: transparent;
     font-size: calc(8px * var(--pixel-size));
+    font-family: "mc-seven";
 }
 body {
     display: flex;

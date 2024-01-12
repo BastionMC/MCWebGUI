@@ -42,3 +42,12 @@ mc-input > input {
 mc-input > input::selection {
     background: #4F913C;
 }
+mc-input > input::placeholder {
+    color: #B1B2B5;
+}
+mc-input > input[disabled|="true"]::selection {
+    color: #48494A;
+}
+mc-input > input[disabled|="true"]::placeholder {
+    color: #48494A;
+}
