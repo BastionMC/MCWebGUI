@@ -3,15 +3,17 @@ mc-input {
     --vertically-repeating: url("../../../assets/input/input_vertical.png");
     --horizontally-repeating: url("../../../assets/input/input_horizontal.png");
 
+    --width: 160px;
+
     display: block;
 }
 
 mc-input,
 mc-input > * {
-    width: calc(160px * var(--pixel-size));
-    max-width: calc(160px * var(--pixel-size));
+    width: calc(var(--width) * var(--pixel-size));
+    max-width: calc(var(--width) * var(--pixel-size));
     height: calc(24px * var(--pixel-size));
-    max-height: calc(160px * var(--pixel-size));
+    max-height: calc(var(--width) * var(--pixel-size));
 
     border: none;
     padding: 0px;
@@ -27,12 +29,15 @@ mc-input:has(input[disabled|="true"]) > * {
 
 mc-input > input {
     height: inherit;
-    width: calc(100% - calc(32px * var(--pixel-size)));
+    width: 100%;
+    max-width: calc(calc(var(--width) * var(--pixel-size)) - calc(16px * var(--pixel-size)));
+    
     caret-color: #4F913C;
     font-family: "mc-seven";
     color: white;
     padding-left: calc(8px * var(--pixel-size));
     padding-right: calc(8px * var(--pixel-size));
+    position: absolute;
 }
 mc-input > input::selection {
     background: #4F913C;
