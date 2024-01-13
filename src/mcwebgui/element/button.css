@@ -5,7 +5,9 @@ mc-button {
 
     display: block;
 
-    --width: 160px
+    --width: 160px;
+
+    user-select: none;
 }
 
 mc-button {
@@ -143,7 +145,7 @@ mc-button[tall|="true"] > button > span.text {
 mc-button[tall|="true"] > button:active > span.text {
     transform: translateY(calc(12px * var(--pixel-size)));
 }
-mc-button[tall|="true"]:disabled > button:active:disabled > span.text {
+mc-button[tall|="true"] > button:disabled:active > span.text {
     transform: translateY(calc(10px * var(--pixel-size)));
 }
 mc-button[tall|="true"][color|="green"] > button > span.text {
@@ -152,6 +154,6 @@ mc-button[tall|="true"][color|="green"] > button > span.text {
 mc-button[tall|="true"][color|="green"] > button:active > span.text {
     transform: translateY(calc(8px * var(--pixel-size)));
 }
-mc-button[tall|="true"][color|="green"] > button:active:disabled > span.text {
+mc-button[tall|="true"][color|="green"] > button:disabled:active > span.text {
     transform: translateY(calc(6px * var(--pixel-size)));
 }
