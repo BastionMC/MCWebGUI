@@ -111,9 +111,42 @@
     
     <divider></divider>
 
-    <mc-switch><input type="checkbox"><span></span></mc-switch>
-    <mc-switch disabled="true"><input disabled="true" type="checkbox"><span></span></mc-switch>
-    <mc-switch disabled="true"><input disabled="true" type="checkbox" checked="true"><span></span></mc-switch>
+    <mc-switch>
+        <input type="checkbox">
+        <span class="knob"></span>
+    </mc-switch>
+    <mc-switch disabled="true">
+        <input disabled="true" type="checkbox">
+        <span class="knob"></span>
+    </mc-switch>
+    <mc-switch disabled="true">
+        <input disabled="true" type="checkbox" checked="true">
+        <span class="knob"></span>
+    </mc-switch>
+
+    <divider></divider>
+
+    <mc-slider>
+        <input type="range" min="1" max="100" value="50" type="slider">
+        <span class="slider">
+            <span class="start"></span>
+            <span class="range"></span>
+            <span class="background"></span>
+            <span class="end"></span>
+        </span>
+        <span class="knob"></span>
+    </mc-slider>
+
+    <mc-slider disabled="true">
+        <input type="range" min="1" max="100" value="50" disabled="true">
+        <span class="slider">
+            <span class="start"></span>
+            <span class="range"></span>
+            <span class="background"></span>
+            <span class="end"></span>
+        </span>
+        <span class="knob"></span>
+    </mc-slider>
 
     <divider></divider>
 

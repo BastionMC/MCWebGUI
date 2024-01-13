@@ -9,8 +9,8 @@
 }
 body {
     display: flex;
-    gap: 8px;
-    margin: 8px;
+    gap: calc(8px * var(--pixel-size));
+    margin: calc(8px * var(--pixel-size));
     flex-wrap: wrap;
 }
 desktop {
@@ -34,7 +34,7 @@ desktop {
     src: url("fonts/ten.otf") format("opentype");
 }
 
-input {
+input, button {
     border: none;
     outline: none;
 }

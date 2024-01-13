@@ -1,0 +1,83 @@
+mc-slider {
+    --slider: url("../../../assets/slider/slider.png");
+    --slider-disabled: url("../../../assets/slider/slider_disabled.png");
+
+    --slider-vertical: url("../../../assets/slider/slider_vertical.png");
+    --slider-disabled-vertical: url("../../../assets/slider/slider_disabled_vertical.png");
+
+    --knob: url("../../../assets/slider/knob.png");
+    --knob-disabled: url("../../../assets/slider/knob.png");
+
+    display: block;
+
+    --width: 160px
+}
+
+mc-slider,
+mc-slider > input {
+    width: calc(var(--width) * var(--pixel-size));
+    max-width: calc(var(--width) * var(--pixel-size));
+    height: calc(24px * var(--pixel-size));
+    max-height: calc(var(--width) * var(--pixel-size));
+
+    background-size: calc(32px * var(--pixel-size));
+
+    border: none;
+    padding: 0px;
+
+    z-index: 2;
+}
+mc-slider > * {
+    position: absolute;
+    display: block;
+}
+mc-slider > input {
+    opacity: 0.25;
+}
+
+mc-slider > span.knob {
+    width: calc(16px * var(--pixel-size));
+    max-width: calc(16px * var(--pixel-size));
+    height: calc(16px * var(--pixel-size));
+    max-height: calc(16px * var(--pixel-size));
+    background-size: calc(32px * var(--pixel-size));
+
+    background-image: var(--knob); 
+    transform: translateY(calc(4px * var(--pixel-size)));
+    z-index: 1;
+}
+mc-slider:has(input:hover) > span.knob {
+    background-position-x: calc(-16px * var(--pixel-size));
+}
+
+mc-slider > span.slider > * {
+    display: block;
+    position: absolute;
+}
+
+mc-slider > span.slider > span.start {
+    background-image: var(--slider);
+    width: calc(8px * var(--pixel-size));
+    height: calc(6px * var(--pixel-size));
+    background-size: calc(8px * var(--pixel-size));
+    transform: translateY(calc(9px * var(--pixel-size)));
+    z-index: 1;
+}
+mc-slider > span.slider > span.background {
+    background-image: var(--slider-vertical);
+    width: calc(var(--width) * var(--pixel-size));
+    background-repeat: repeat-x;
+    height: calc(6px * var(--pixel-size));
+    background-size: calc(8px * var(--pixel-size));
+    transform: translateY(calc(9px * var(--pixel-size)));
+    z-index: 0;
+}
+mc-slider > span.slider > span.end {
+    background-image: var(--slider);
+    width: calc(8px * var(--pixel-size));
+    height: calc(6px * var(--pixel-size));
+    background-size: calc(8px * var(--pixel-size));
+    z-index: 1;
+    background-position-y: calc(-6px * var(--pixel-size));
+    transform: translateY(calc(9px * var(--pixel-size))) translateX(calc(calc(var(--width) - 8px) * var(--pixel-size)));
+}
