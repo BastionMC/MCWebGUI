@@ -19,7 +19,7 @@ mc-input > * {
     padding: 0px;
     --background-y: 8px;
 }
-mc-input:has(input[disabled|="true"]) > * {
+mc-input:has(input:disabled) > * {
     --non-repeating: url("../../../assets/input/disabled.png");
     --vertically-repeating: url("../../../assets/input/disabled_vertical.png");
     --horizontally-repeating: url("../../../assets/input/disabled_horizontal.png");
@@ -45,9 +45,9 @@ mc-input > input::selection {
 mc-input > input::placeholder {
     color: #B1B2B5;
 }
-mc-input > input[disabled|="true"]::selection {
+mc-input > input:disabled::selection {
     color: #48494A;
 }
-mc-input > input[disabled|="true"]::placeholder {
+mc-input > input:disabled::placeholder {
     color: #48494A;
 }

@@ -6,7 +6,7 @@ mc-slider {
     --slider-disabled-vertical: url("../../../assets/slider/slider_disabled_vertical.png");
 
     --knob: url("../../../assets/slider/knob.png");
-    --knob-disabled: url("../../../assets/slider/knob.png");
+    --knob-disabled: url("../../../assets/slider/knob_disabled.png");
 
     display: block;
 
@@ -80,4 +80,18 @@ mc-slider > span.slider > span.end {
     z-index: 1;
     background-position-y: calc(-6px * var(--pixel-size));
     transform: translateY(calc(9px * var(--pixel-size))) translateX(calc(calc(var(--width) - 8px) * var(--pixel-size)));
+}
+
+mc-slider:has(input:disabled) > span.slider > span.start {
+    background-image: var(--slider-disabled);
+}
+mc-slider:has(input:disabled) > span.slider > span.background {
+    background-image: var(--slider-disabled-vertical);
+}
+mc-slider:has(input:disabled) > span.slider > span.end {
+    background-image: var(--slider-disabled);
+}
+
+mc-slider:has(input:disabled) > span.knob {
+    background-image: var(--knob-disabled);
 }
