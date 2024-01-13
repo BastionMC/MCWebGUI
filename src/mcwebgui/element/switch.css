@@ -88,12 +88,12 @@ mc-switch:has(input:checked) > span {
     }
 }
 
-mc-switch[disabled|="true"]:has(input[disabled|="true"]) > span {
+mc-switch:has(input[disabled|="true"]) > span {
     display: none;
 }
-mc-switch[disabled|="true"]:has(input[disabled|="true"]:not(:checked)) {
+mc-switch:has(input[disabled|="true"]:not(:checked)) {
     background-image: var(--disabled-off);
 }
-mc-switch[disabled|="true"]:has(input[disabled|="true"]:checked) {
+mc-switch:has(input[disabled|="true"]:checked) {
     background-image: var(--disabled-on);
 }

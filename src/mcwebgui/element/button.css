@@ -40,7 +40,7 @@ mc-button > button > span.text {
 mc-button > button:active > span.text {
     transform: translateY(calc(9px * var(--pixel-size)));
 }
-mc-button[disabled|="true"] > button:active[disabled|="true"] > span.text {
+mc-button > button:active[disabled|="true"] > span.text {
     transform: translateY(calc(7px * var(--pixel-size)));
 }
 mc-button[color|="green"] > button > span.text {
@@ -69,7 +69,7 @@ mc-button[color|="dark"] > button > span.text {
     color: white;
 }
 
-mc-button[disabled|="true"] > button[disabled|="true"] > span.text {
+mc-button > button[disabled|="true"] > span.text {
     color: #48494A;
 }
 
@@ -114,21 +114,21 @@ mc-button > *[disabled|="true"] {
     
     --background-y: 8px;
 }
-mc-button[disabled|="true"] > button[disabled|="true"]:hover > span.nine-grid {
+mc-button > button[disabled|="true"]:hover > span.nine-grid {
     --non-repeating-y-offset: 0px;
     --background-y: 8px;
 
     --vertical-x-offset: 0px;
     --horizontal-y-offset: 0px;
 }
-mc-button[disabled|="true"] > button[disabled|="true"]:active > span.nine-grid {
+mc-button > button[disabled|="true"]:active > span.nine-grid {
     --non-repeating-y-offset: 0px;
     --background-y: 8px;
 
     --vertical-x-offset: 0px;
     --horizontal-y-offset: 0px;
 }
-mc-button[disabled|="true"][color|="green"] > button > span.text {
+mc-button[color|="green"] > button > span.text {
     text-shadow: none;
 }
 
@@ -155,6 +155,6 @@ mc-button[tall|="true"][color|="green"] > button > span.text {
 mc-button[tall|="true"][color|="green"] > button:active > span.text {
     transform: translateY(calc(8px * var(--pixel-size)));
 }
-mc-button[tall|="true"][color|="green"][disabled|="true"] > button:active[disabled|="true"] > span.text {
+mc-button[tall|="true"][color|="green"] > button:active[disabled|="true"] > span.text {
     transform: translateY(calc(6px * var(--pixel-size)));
 }
