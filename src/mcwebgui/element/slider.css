@@ -32,7 +32,7 @@ mc-slider > * {
     display: block;
 }
 mc-slider > input {
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 mc-slider > span.knob {
@@ -94,4 +94,56 @@ mc-slider:has(input:disabled) > span.slider > span.end {
 
 mc-slider:has(input:disabled) > span.knob {
     background-image: var(--knob-disabled);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    width: 300px;
+    height: 8px;
+    background-color: #ddd;
+    position: relative;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.slider .knob {
+    width: 16px;
+    height: 16px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.green-background {
+    height: 100%;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Set initial width to 50% */
+    border-radius: 5px;
 }
