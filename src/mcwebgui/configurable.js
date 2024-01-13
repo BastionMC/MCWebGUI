@@ -1,0 +1,1 @@
+// TODO: Add functions for setting settings, such as pixel size.
