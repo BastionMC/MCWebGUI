@@ -55,3 +55,22 @@ function setupSlider(sliderId, knobId, initialValue) {
 
 setupSlider("slider1", "sliderKnob1", 50);
 setupSlider("slider2", "sliderKnob2", 2);
+
+
+
+
+
+
+
+
+
+
+MCWebGUI.Element.Slider = {}
+
+class MCSlider extends HTMLElement {
+    constructor() {
+        super();
+
+        this.innerHTML = "<span class=\"start\"></span><span class=\"background\"></span><span class=\"range\"></span><span class=\"knob\"></span><span class=\"end\"></span>"
+    }
+}

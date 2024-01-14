@@ -55,7 +55,7 @@ mc-slider > span.slider > * {
     position: absolute;
 }
 
-mc-slider > span.slider > span.start {
+mc-slider > span.start {
     background-image: var(--slider);
     width: calc(8px * var(--pixel-size));
     height: calc(6px * var(--pixel-size));
@@ -63,16 +63,18 @@ mc-slider > span.slider > span.start {
     transform: translateY(calc(9px * var(--pixel-size)));
     z-index: 1;
 }
-mc-slider > span.slider > span.background {
+mc-slider > span.background {
     background-image: var(--slider-vertical);
     width: calc(var(--width) * var(--pixel-size));
     background-repeat: repeat-x;
     height: calc(6px * var(--pixel-size));
     background-size: calc(8px * var(--pixel-size));
-    transform: translateY(calc(9px * var(--pixel-size)));
     z-index: 0;
+    margin-top: calc(6px * var(--pixel-size));
+    margin-bottom: calc(6px * var(--pixel-size));
+    transform: translateY(calc(3px * var(--pixel-size)));
 }
-mc-slider > span.slider > span.end {
+mc-slider > span.end {
     background-image: var(--slider);
     width: calc(8px * var(--pixel-size));
     height: calc(6px * var(--pixel-size));

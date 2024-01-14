@@ -62,4 +62,5 @@ h6 {
 
 *::selection {
     background: #4F913C;
+    color: white;
 }
