@@ -44,7 +44,7 @@ mc-slider > span.knob {
 
     background-image: var(--knob); 
     /* transform is changed by the code!! look at slider.js */
-    z-index: 1;
+    z-index: 2;
 }
 mc-slider:hover > span.knob {
     background-position-x: calc(-16px * var(--pixel-size));
@@ -73,6 +73,17 @@ mc-slider > span.background {
     margin-top: calc(6px * var(--pixel-size));
     margin-bottom: calc(6px * var(--pixel-size));
     transform: translateY(calc(3px * var(--pixel-size)));
+}
+mc-slider > span.range {
+    background-image: var(--slider-vertical);
+    width: calc(var(--width) * var(--pixel-size));
+    background-repeat: repeat-x;
+    height: calc(6px * var(--pixel-size));
+    background-size: calc(8px * var(--pixel-size));
+    z-index: 0;
+    transform: translateY(calc(9px * var(--pixel-size)));
+
+    background-position-y: calc(-6px * var(--pixel-size));
 }
 mc-slider > span.end {
     background-image: var(--slider);

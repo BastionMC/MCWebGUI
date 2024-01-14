@@ -6,11 +6,10 @@ function setupSlider(slider, knob, initialValue) {
     const max = parseFloat(slider.getAttribute("max")) || 100;
 
     function setKnobPosition(value) {
-        const percentage = ((value - min) / (max - min)) * 100;
 
         /* This is the longest line of JavaScript that I have ever written, even though the majority is CSS. */
         knob.style.transform = `translateY(calc(4px * var(--pixel-size))) translateX(calc(calc(calc(var(--width) * var(--pixel-size)) * calc(calc(${value} - ${min}) / calc(${max} - ${min}))) - calc(8px * var(--pixel-size)))`;
-        greenBackground.style.width = `${percentage}%`;
+        greenBackground.style.width = `calc(calc(calc(var(--width) * var(--pixel-size)) * calc(calc(${value} - ${min}) / calc(${max} - ${min}))) - calc(8px * var(--pixel-size))`;
     }
 
     setKnobPosition(parseFloat(slider.getAttribute("value")) || initialValue);
