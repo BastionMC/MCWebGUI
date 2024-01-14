@@ -1,40 +1,14 @@
-/* MCWebGUI.Element.Switch = {}
+MCWebGUI.Element.Input = {}
 
-class MCSwitch extends HTMLElement {
+class MCInput extends HTMLElement {
     constructor() {
         super();
 
-        this.innerHTML = "<input type=\"checkbox\"><span class=\"knob\"></span>"
-        this.querySelector("input").disabled = this.getAttribute("disabled")
-    }
-
-    connectedCallback() {
-        console.log("Custom element added to page.");
-    }
-
-    disconnectedCallback() {
-        console.log("Custom element removed from page.");
-    }
-
-    adoptedCallback() {
-        console.log("Custom element moved to new page.");
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-
-        this.getAttribute("disabled")
-
-        console.log(`Attribute ${name} has changed.`);
+        this.innerHTML = "<input></input><span class=\"nine-grid\"></span>";
+        this.querySelector("input").disabled = this.getAttribute("disabled");
+        this.querySelector("input").placeholder = this.getAttribute("placeholder");
+        this.getElementsByClassName("nine-grid")[0].innerHTML = "<span></span>".repeat(9);
     }
 }
 
-customElements.define("mc-switch", MCSwitch); 
-
-
-
-TEMPORARY!!!!!!!!!
-
-
-
-
-*/
+customElements.define("mc-input", MCInput);
