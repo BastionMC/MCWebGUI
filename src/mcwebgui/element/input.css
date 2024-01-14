@@ -39,9 +39,6 @@ mc-input > input {
     padding-right: calc(8px * var(--pixel-size));
     position: absolute;
 }
-mc-input > input::selection {
-    background: #4F913C;
-}
 mc-input > input::placeholder {
     color: #B1B2B5;
 }
