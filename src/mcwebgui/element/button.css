@@ -60,7 +60,7 @@ mc-button[color|="green"] > button:active > span.text {
     transform: translateY(calc(5px * var(--pixel-size)));
     text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #14360D;
 }
-mc-button[color|="green"]:disabled > button:active:disabled > span.text {
+mc-button[color|="green"] > button:active:disabled > span.text {
     transform: translateY(calc(3px * var(--pixel-size)));
 }
 
