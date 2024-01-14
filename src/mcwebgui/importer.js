@@ -27,3 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     stylesheets.id = "mcwebgui-stylesheets";
     document.head.appendChild(stylesheets);
 });
+
+window.onerror = function() {
+    MCWebGUILog("Error Handling", "firebrick", "An error ocurred, attempting to reload the page.");
+    location.reload();
+}

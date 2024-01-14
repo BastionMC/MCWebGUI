@@ -15,8 +15,3 @@ if (MCWebGUI.Information.WindowTitle == "") {
     document.title = MCWebGUI.Information.WindowTitle
     MCWebGUI.Log("Error Handling", "firebrick", "No \"title\" element found, using default of \"MCWebGUI\"");
 };
-
-window.onerror = function() {
-    MCWebGUI.Log("Error Handling", "firebrick", "An error ocurred, attempting to reload the page.");
-    location.reload();
-}

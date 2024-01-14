@@ -6,26 +6,8 @@ class MCSwitch extends HTMLElement {
 
         this.innerHTML = "<input type=\"checkbox\"><span class=\"knob\"></span>"
         this.querySelector("input").disabled = this.getAttribute("disabled")
+        this.querySelector("input").checked = this.getAttribute("toggled")
     }
-
-    /* connectedCallback() {
-        console.log("Custom element added to page.");
-    }
-
-    disconnectedCallback() {
-        console.log("Custom element removed from page.");
-    }
-
-    adoptedCallback() {
-        console.log("Custom element moved to new page.");
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-
-        this.getAttribute("disabled")
-
-        console.log(`Attribute ${name} has changed.`);
-    } */
 }
 
 customElements.define("mc-switch", MCSwitch);
