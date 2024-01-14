@@ -11,8 +11,8 @@ class MCButton extends HTMLElement {
         this.innerHTML = "<button><span class=\"text\"></span><span class=\"nine-grid\"></span></button>";
         let innerButton = this.querySelector("button");
         innerButton.disabled = this.getAttribute("disabled");
-        innerButton.getElementsByClassName("nine-grid")[0].innerHTML = "<span></span>".repeat(9);
-        innerButton.getElementsByClassName("text")[0].innerHTML = text;
+        innerButton.querySelector(".nine-grid").innerHTML = "<span></span>".repeat(9);
+        innerButton.querySelector(".text").innerHTML = text;
     }
 }
 

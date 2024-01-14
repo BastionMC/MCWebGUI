@@ -7,7 +7,7 @@ class MCInput extends HTMLElement {
         this.innerHTML = "<input></input><span class=\"nine-grid\"></span>";
         this.querySelector("input").disabled = this.getAttribute("disabled");
         this.querySelector("input").placeholder = this.getAttribute("placeholder");
-        this.getElementsByClassName("nine-grid")[0].innerHTML = "<span></span>".repeat(9);
+        this.querySelector(".nine-grid").innerHTML = "<span></span>".repeat(9);
     }
 }
 

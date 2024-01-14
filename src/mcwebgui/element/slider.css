@@ -10,7 +10,7 @@ mc-slider {
 
     display: block;
 
-    --width: 160px
+    --width: 320px
 }
 
 mc-slider,
@@ -43,10 +43,10 @@ mc-slider > span.knob {
     background-size: calc(32px * var(--pixel-size));
 
     background-image: var(--knob); 
-    transform: translateY(calc(4px * var(--pixel-size)));
+    /* transform is changed by the code!! look at slider.js */
     z-index: 1;
 }
-mc-slider:has(input:hover) > span.knob {
+mc-slider:hover > span.knob {
     background-position-x: calc(-16px * var(--pixel-size));
 }
 

@@ -1,7 +1,5 @@
-function setupSlider(sliderId, knobId, initialValue) {
-    const slider = document.getElementById(sliderId);
-    const knob = document.getElementById(knobId);
-    const greenBackground = slider.querySelector(".green-background");
+function setupSlider(slider, knob, initialValue) {
+    const greenBackground = slider.querySelector(".range");
     let isDragging = false;
 
     const min = parseFloat(slider.getAttribute("min")) || 0;
@@ -9,7 +7,9 @@ function setupSlider(sliderId, knobId, initialValue) {
 
     function setKnobPosition(value) {
         const percentage = ((value - min) / (max - min)) * 100;
-        knob.style.left = `${percentage}%`;
+
+        /* This is the longest line of JavaScript that I have ever written, even though the majority is CSS. */
+        knob.style.transform = `translateY(calc(4px * var(--pixel-size))) translateX(calc(calc(calc(var(--width) * var(--pixel-size)) * calc(calc(${value} - ${min}) / calc(${max} - ${min}))) - calc(8px * var(--pixel-size)))`;
         greenBackground.style.width = `${percentage}%`;
     }
 
@@ -53,9 +53,6 @@ function setupSlider(sliderId, knobId, initialValue) {
     }
 }
 
-setupSlider("slider1", "sliderKnob1", 50);
-setupSlider("slider2", "sliderKnob2", 2);
-
 
 
 
@@ -72,5 +69,8 @@ class MCSlider extends HTMLElement {
         super();
 
         this.innerHTML = "<span class=\"start\"></span><span class=\"background\"></span><span class=\"range\"></span><span class=\"knob\"></span><span class=\"end\"></span>"
+        setupSlider(this, this.querySelector(".knob"), 50);
     }
 }
+
+customElements.define("mc-slider", MCSlider);
