@@ -13,8 +13,7 @@ mc-slider {
     --width: 320px
 }
 
-mc-slider,
-mc-slider > input {
+mc-slider {
     width: calc(var(--width) * var(--pixel-size));
     max-width: calc(var(--width) * var(--pixel-size));
     height: calc(24px * var(--pixel-size));
@@ -31,9 +30,6 @@ mc-slider > * {
     position: absolute;
     display: block;
 }
-mc-slider > input {
-    opacity: 0.5;
-}
 
 mc-slider > span.knob {
     width: calc(16px * var(--pixel-size));
@@ -43,8 +39,8 @@ mc-slider > span.knob {
     background-size: calc(32px * var(--pixel-size));
 
     background-image: var(--knob); 
-    /* transform is changed by the code!! look at slider.js */
     z-index: 2;
+    /* transform is changed by the code!! look at slider.js */
 }
 mc-slider:hover > span.knob {
     background-position-x: calc(-16px * var(--pixel-size));
@@ -76,14 +72,13 @@ mc-slider > span.background {
 }
 mc-slider > span.range {
     background-image: var(--slider-vertical);
-    width: calc(var(--width) * var(--pixel-size));
     background-repeat: repeat-x;
     height: calc(6px * var(--pixel-size));
     background-size: calc(8px * var(--pixel-size));
     z-index: 0;
     transform: translateY(calc(9px * var(--pixel-size)));
-
     background-position-y: calc(-6px * var(--pixel-size));
+    /* width is changed by the code!! look at slider.js */
 }
 mc-slider > span.end {
     background-image: var(--slider);
@@ -109,54 +104,27 @@ mc-slider:has(input:disabled) > span.knob {
     background-image: var(--knob-disabled);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+mc-slider > span.lines {
+    width: calc(var(--width) * var(--pixel-size));
+    background-repeat: repeat-x;
+    height: calc(6px * var(--pixel-size));
+    z-index: 1;
+    transform: translateY(calc(9px * var(--pixel-size)));
 }
 
-.slider {
-    width: 300px;
-    height: 8px;
-    background-color: #ddd;
-    position: relative;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-.slider .knob {
-    width: 16px;
-    height: 16px;
-    background-color: #4CAF50;
-    border-radius: 50%;
+mc-slider > span.lines > span {
+    width: calc(1px * var(--pixel-size));
+    background-repeat: repeat-x;
+    height: calc(6px * var(--pixel-size));
+    background-image: var(--slider);
+    background-position-y: calc(-12px * var(--pixel-size));
+    background-size: calc(8px * var(--pixel-size));
     position: absolute;
-    top: 50%;
-    left: 50%; /* Centered horizontally */
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+    /* transform is changed by the code!! look at slider.js */
 }
 
-.green-background {
-    height: 100%;
-    background-color: #4CAF50;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; /* Set initial width to 50% */
-    border-radius: 5px;
+mc-slider[disabled|="true"] {
+    --slider: var(--slider-disabled);
+    --slider-vertical: var(--slider-disabled-vertical);
+    --knob: var(--knob-disabled);
 }

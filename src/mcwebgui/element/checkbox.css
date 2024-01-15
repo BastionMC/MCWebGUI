@@ -5,6 +5,7 @@ mc-checkbox {
     display: block;
     
     background-image: var(--normal);
+    background-repeat: repeat-y;
 }
 
 mc-checkbox,
@@ -43,11 +44,6 @@ mc-checkbox:has(input:checked) {
     background-position-x: calc(-12px * var(--pixel-size));
 }
 
-mc-checkbox:has(input:disabled:not(:checked)) {
-    background-image: var(--disabled);
-    background-position-y: calc(0px * var(--pixel-size));
-}
-mc-checkbox:has(input:disabled:checked) {
-    background-image: var(--disabled);
-    background-position-y: calc(0px * var(--pixel-size));
+mc-checkbox:has(input:disabled) {
+    --normal: var(--disabled);
 }
