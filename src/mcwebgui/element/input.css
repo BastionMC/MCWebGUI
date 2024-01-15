@@ -30,7 +30,7 @@ mc-input:has(input:disabled) > * {
 mc-input > input {
     height: inherit;
     width: 100%;
-    max-width: calc(calc(var(--width) * var(--pixel-size)) - calc(16px * var(--pixel-size)));
+    max-width: calc((var(--width) * var(--pixel-size)) - (16px * var(--pixel-size)));
     
     caret-color: #4F913C;
     font-family: "mc-seven";

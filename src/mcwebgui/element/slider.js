@@ -1,4 +1,6 @@
-function setupSlider(slider, knob, initialValue) {
+MCWebGUI.Element.Slider = {}
+
+MCWebGUI.Element.Slider.SetupElement = function (slider, knob, initialValue) {
     const range = slider.querySelector(".range");
     let isDragging = false;
 
@@ -6,8 +8,6 @@ function setupSlider(slider, knob, initialValue) {
     const max = parseFloat(slider.getAttribute("max")) || 100;
 
     function setKnobPosition(value) {
-
-        /* This is the longest line of JavaScript that I have ever written, even though the majority is CSS. */
         knob.style.transform = `translateY(calc(4px * var(--pixel-size))) translateX(calc(((var(--width) * var(--pixel-size)) * ((${value} - ${min}) / (${max} - ${min}))) - (8px * var(--pixel-size)))`;
         range.style.width = `calc((var(--width) * var(--pixel-size)) * ((${value} - ${min}) / (${max} - ${min})))`;
     }
@@ -26,7 +26,6 @@ function setupSlider(slider, knob, initialValue) {
     function startSlide(e) {
         e.preventDefault();
 
-        // Check if the slider is disabled
         if (slider.hasAttribute("disabled")) {
             return;
         }
@@ -56,8 +55,6 @@ function setupSlider(slider, knob, initialValue) {
         slider.setAttribute("value", value);
     }
 }
-
-MCWebGUI.Element.Slider = {}
 
 class MCSlider extends HTMLElement {
     constructor() {

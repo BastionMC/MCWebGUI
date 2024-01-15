@@ -38,6 +38,10 @@ mc-button > button > span.text {
     font-family: "mc-seven";
     position: absolute;
     transform: translateY(calc(7px * var(--pixel-size)));
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 mc-button > button:active > span.text {
     transform: translateY(calc(9px * var(--pixel-size)));

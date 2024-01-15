@@ -87,7 +87,7 @@ mc-slider > span.end {
     background-size: calc(8px * var(--pixel-size));
     z-index: 1;
     background-position-y: calc(-6px * var(--pixel-size));
-    transform: translateY(calc(9px * var(--pixel-size))) translateX(calc(calc(var(--width) - 8px) * var(--pixel-size)));
+    transform: translateY(calc(9px * var(--pixel-size))) translateX(calc((var(--width) - 8px) * var(--pixel-size)));
 }
 
 mc-slider:has(input:disabled) > span.slider > span.start {
