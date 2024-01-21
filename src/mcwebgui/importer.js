@@ -28,9 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(stylesheets);
 });
 
+// Sometimes loading MCWebGUI can go wrong, but simply reloading
+// the page seems to fix the issue. Just let this be unless it's
+// causing problems, k? - Jae
+
+// To be honest, this might cause flashing lights if the user of
+// MCWebGUI screws something up in the first 250 microseconds
+// of the document being loaded. Maybe add a temporary cookie to
+// avoid refreshing more then a certain ammount, for sample,
+// "5" should work. Do this later.
+
 window.onerror = function() {
-    MCWebGUILog("Error Handling", "firebrick", "An error ocurred, attempting to reload the page.");
+    MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
     setTimeout(function () {
-        location.reload()
-    }, 500);
-}
+        location.reload();
+    }, 250);
+};
+setTimeout(function () {
+    window.onerror = null;
+}, 250)

@@ -1,5 +1,7 @@
 /* TODO: Make this less janky. */
 
+/* TODO: Port everything to use border-background like wtf how didn't i know about it*/
+
 *:has(.nine-grid) {
     --non-repeating-y-offset: 0px;
     --background-y: 24px;
