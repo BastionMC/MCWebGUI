@@ -34,11 +34,6 @@ desktop {
     src: url("fonts/ten.otf") format("opentype");
 }
 
-input, button {
-    border: none;
-    outline: none;
-}
-
 h1 {
     font-size: calc(16px * var(--pixel-size));
     font-family: "mc-ten";

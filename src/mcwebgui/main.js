@@ -15,3 +15,7 @@ if (MCWebGUI.Information.WindowTitle == "") {
     document.title = MCWebGUI.Information.WindowTitle
     MCWebGUI.Log("Error Handling", "firebrick", "No \"title\" element found, using default of \"MCWebGUI\"");
 };
+
+MCWebGUI.GeneratedCSS = document.createElement("style");
+MCWebGUI.GeneratedCSS.id = "mcwebgui-generated";
+document.head.appendChild(MCWebGUI.GeneratedCSS);

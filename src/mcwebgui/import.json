@@ -15,7 +15,6 @@
     "stylesheets": [
         "src/mcwebgui/configurable.css",
         "src/mcwebgui/base.css",
-        "src/mcwebgui/grid.css",
 
         "src/mcwebgui/element/button.css",
         "src/mcwebgui/element/input.css",
