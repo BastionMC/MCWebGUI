@@ -60,7 +60,7 @@ class MCSlider extends HTMLElement {
     constructor() {
         super();
 
-        this.innerHTML = "<span class=\"start\"></span><span class=\"background\"></span><span class=\"range\"></span><span class=\"knob\"></span><span class=\"end\"></span><span class=\"lines\"></span>"
+        this.innerHTML = "<span class=\"background\"></span><span class=\"range\"></span><span class=\"knob\"></span><span class=\"lines\"></span>"
         MCWebGUI.Element.Slider.SetupElement(this, this.querySelector(".knob"), this.getAttribute("value"));
 
         const max = this.getAttribute("max") || 100;

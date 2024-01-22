@@ -1,12 +1,12 @@
 mc-slider {
-    --slider: url("../../../assets/slider/slider.png");
-    --slider-disabled: url("../../../assets/slider/slider_disabled.png");
-
-    --slider-vertical: url("../../../assets/slider/slider_vertical.png");
-    --slider-disabled-vertical: url("../../../assets/slider/slider_disabled_vertical.png");
-
     --knob: url("../../../assets/slider/knob.png");
     --knob-disabled: url("../../../assets/slider/knob_disabled.png");
+
+    --background: url("../../../assets/slider/background.png");
+    --background-disabled: url("../../../assets/slider/background_disabled.png");
+
+    --range: url("../../../assets/slider/range.png");
+    --range-disabled: url("../../../assets/slider/range_disabled.png");
 
     display: block;
 
@@ -19,9 +19,6 @@ mc-slider {
     height: calc(24px * var(--pixel-size));
     max-height: calc(var(--width) * var(--pixel-size));
 
-    background-size: calc(32px * var(--pixel-size));
-
-    border: none;
     padding: 0px;
 
     z-index: 2;
@@ -46,48 +43,25 @@ mc-slider:hover > span.knob {
     background-position-x: calc(-16px * var(--pixel-size));
 }
 
-mc-slider > span.slider > * {
-    display: block;
-    position: absolute;
-}
-
-mc-slider > span.start {
-    background-image: var(--slider);
-    width: calc(8px * var(--pixel-size));
-    height: calc(6px * var(--pixel-size));
-    background-size: calc(8px * var(--pixel-size));
-    transform: translateY(calc(9px * var(--pixel-size)));
-    z-index: 1;
-}
 mc-slider > span.background {
-    background-image: var(--slider-vertical);
-    width: calc(var(--width) * var(--pixel-size));
-    background-repeat: repeat-x;
-    height: calc(6px * var(--pixel-size));
-    background-size: calc(8px * var(--pixel-size));
+    width: calc((var(--width) * var(--pixel-size)) - (8px * var(--pixel-size)));
+    height: 0px;
     z-index: 0;
     margin-top: calc(6px * var(--pixel-size));
     margin-bottom: calc(6px * var(--pixel-size));
     transform: translateY(calc(3px * var(--pixel-size)));
+    border-width: calc(3px * var(--pixel-size));
+    border-image: var(--background) 3;
 }
 mc-slider > span.range {
-    background-image: var(--slider-vertical);
-    background-repeat: repeat-x;
-    height: calc(6px * var(--pixel-size));
+    height: 0px;
     background-size: calc(8px * var(--pixel-size));
     z-index: 0;
     transform: translateY(calc(9px * var(--pixel-size)));
     background-position-y: calc(-6px * var(--pixel-size));
+    border-width: calc(3px * var(--pixel-size));
+    border-image: var(--range) 3;
     /* width is changed by the code!! look at slider.js */
-}
-mc-slider > span.end {
-    background-image: var(--slider);
-    width: calc(8px * var(--pixel-size));
-    height: calc(6px * var(--pixel-size));
-    background-size: calc(8px * var(--pixel-size));
-    z-index: 1;
-    background-position-y: calc(-6px * var(--pixel-size));
-    transform: translateY(calc(9px * var(--pixel-size))) translateX(calc((var(--width) - 8px) * var(--pixel-size)));
 }
 
 mc-slider:has(input:disabled) > span.slider > span.start {
@@ -114,17 +88,17 @@ mc-slider > span.lines {
 
 mc-slider > span.lines > span {
     width: calc(1px * var(--pixel-size));
-    background-repeat: repeat-x;
     height: calc(6px * var(--pixel-size));
-    background-image: var(--slider);
-    background-position-y: calc(-12px * var(--pixel-size));
-    background-size: calc(8px * var(--pixel-size));
+    background-color: #1e1e1f;
     position: absolute;
     /* transform is changed by the code!! look at slider.js */
 }
 
 mc-slider[disabled|="true"] {
-    --slider: var(--slider-disabled);
-    --slider-vertical: var(--slider-disabled-vertical);
+    --background: var(--background-disabled);
+    --range: var(--range-disabled);
     --knob: var(--knob-disabled);
+}
+mc-slider[disabled|="true"] > span.lines > span {
+    background-color: #8c8d90;
 }

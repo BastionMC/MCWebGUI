@@ -1,6 +1,6 @@
 mc-input {
-    --asset-writable: url("../../../assets/input/writable.png");
-    --asset-disabled: url("../../../assets/input/disabled.png");
+    --writable: url("../../../assets/input/writable.png");
+    --disabled: url("../../../assets/input/disabled.png");
 
     --width: 160px;
 
@@ -28,19 +28,19 @@ mc-input > input {
     padding-right: calc(4px * var(--pixel-size));
 
     border-width: calc(4px * var(--pixel-size));
-    border-image: var(--asset-writable) 4;
+    border-image: var(--writable) 4;
 
     border-radius: 0px !important;
 
-    background-image: var(--asset-writable);
+    background-image: var(--writable);
     background-position-x: calc((var(--width) * -1) * var(--pixel-size));
     background-position-y: calc((var(--width) * -1) * var(--pixel-size));
     background-size: calc((var(--width) * 3) * var(--pixel-size));
     background-repeat: repeat;
 }
 mc-input > input:disabled {
-    border-image: var(--asset-disabled) 4;
-    background-image: var(--asset-disabled);
+    border-image: var(--disabled) 4;
+    background-image: var(--disabled);
 }
 mc-input > input::placeholder {
     color: #B1B2B5;

@@ -1,13 +1,8 @@
 mc-button {
-    --asset-normal: url("../../../assets/button/bland.png");
-    --asset-hover: url("../../../assets/button/bland_hover.png");
-    --asset-active: url("../../../assets/button/bland_active.png");
-    --asset-disabled: url("../../../assets/button/disabled.png");
-
-    --background-normal: #d0d1d4;
-    --background-hover: #b1b2b5;
-    --background-active: #b1b2b5;
-    --background-disabled: #d0d1d4;
+    --normal: url("../../../assets/button/bland.png");
+    --hover: url("../../../assets/button/bland_hover.png");
+    --active: url("../../../assets/button/bland_active.png");
+    --disabled: url("../../../assets/button/disabled.png");
 
     --width: 160px;
 
@@ -34,14 +29,13 @@ mc-button > button {
     justify-content: center;
 
     border-width: calc(4px * var(--pixel-size));
-    border-image: var(--asset-normal) 4;
+    border-image: var(--normal) 4;
 
-    background-image: var(--asset-normal);
+    background-image: var(--normal);
     background-position-x: calc((var(--width) * -1) * var(--pixel-size));
     background-position-y: calc((var(--width) * -1) * var(--pixel-size));
     background-size: calc((var(--width) * 3) * var(--pixel-size));
     background-repeat: repeat;
-    
 }
 
 mc-button > button > span.text {
@@ -90,18 +84,18 @@ mc-button > button:disabled > span.text {
 }
 
 mc-button > button:hover {
-    border-image: var(--asset-hover) 4;
-    background-image: var(--asset-hover);
+    border-image: var(--hover) 4;
+    background-image: var(--hover);
 }
 mc-button > button:active {
-    border-image: var(--asset-active) 4;
-    background-image: var(--asset-active);
+    border-image: var(--active) 4;
+    background-image: var(--active);
 }
 mc-button > button:disabled {
-    --asset-normal: var(--asset-disabled);
-    --asset-hover: var(--asset-disabled);
-    --asset-active: var(--asset-disabled);
-    background-image: var(--asset-disabled);
+    --normal: var(--disabled);
+    --hover: var(--disabled);
+    --active: var(--disabled);
+    background-image: var(--disabled);
 }
 
 mc-button[tall|="true"] {
