@@ -33,9 +33,9 @@ mc-input > input {
     border-radius: 0px !important;
 
     background-image: var(--asset-writable);
-    background-position-x: calc(-4px * var(--pixel-size));
-    background-position-y: calc(-4px * var(--pixel-size));
-    background-size: calc(12px * var(--pixel-size));
+    background-position-x: calc((var(--width) * -1) * var(--pixel-size));
+    background-position-y: calc((var(--width) * -1) * var(--pixel-size));
+    background-size: calc((var(--width) * 3) * var(--pixel-size));
     background-repeat: repeat;
 }
 mc-input > input:disabled {
