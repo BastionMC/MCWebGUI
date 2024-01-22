@@ -1,4 +1,4 @@
-MCWebGUI.Element.Button = {}
+MCWebGUI.Element.Button = {};
 
 MCWebGUI.Element.Button.GenerateCSS = function () {
     const colors = ["green", "red", "purple", "dark"];

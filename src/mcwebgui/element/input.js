@@ -1,4 +1,4 @@
-MCWebGUI.Element.Input = {}
+MCWebGUI.Element.Input = {};
 
 class MCInput extends HTMLElement {
     constructor() {
