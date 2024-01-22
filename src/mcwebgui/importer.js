@@ -40,10 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.onerror = function() {
     MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
-    setTimeout(function () {
-        location.reload();
-    }, 150);
+    location.reload();
 };
 setTimeout(function () {
     window.onerror = null;
-}, 150)
+}, 100)
