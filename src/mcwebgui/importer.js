@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // causing problems, k? - Jae
 
 // To be honest, this might cause flashing lights if the user of
-// MCWebGUI screws something up in the first 250 microseconds
+// MCWebGUI screws something up in the first 150 microseconds
 // of the document being loaded. Maybe add a temporary cookie to
 // avoid refreshing more then a certain ammount, for sample,
 // "5" should work. Do this later.
@@ -42,8 +42,8 @@ window.onerror = function() {
     MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
     setTimeout(function () {
         location.reload();
-    }, 250);
+    }, 150);
 };
 setTimeout(function () {
     window.onerror = null;
-}, 250)
+}, 150)
