@@ -40,6 +40,7 @@ mc-button > button {
     background-position-x: calc(-4px * var(--pixel-size));
     background-position-y: calc(-4px * var(--pixel-size));
     background-size: calc(12px * var(--pixel-size));
+    background-repeat: repeat;
     
 }
 
@@ -62,20 +63,18 @@ mc-button > button:active:disabled > span.text {
 mc-button[color|="green"] > button > span.text {
     font-size: calc(12px * var(--pixel-size));
     font-family: "mc-ten";
-    transform: translateY(calc(3px * var(--pixel-size)));
+    transform: translateY(calc(-1px * var(--pixel-size)));
     text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #2A5D1B;
 }
 mc-button[color|="green"] > button:hover > span.text {
     text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #1D4614;
 }
 mc-button[color|="green"] > button:active > span.text {
-    font-size: calc(12px * var(--pixel-size));
-    font-family: "mc-ten";
-    transform: translateY(calc(5px * var(--pixel-size)));
+    transform: translateY(calc(1px * var(--pixel-size)));
     text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #14360D;
 }
 mc-button[color|="green"] > button:active:disabled > span.text {
-    transform: translateY(calc(3px * var(--pixel-size)));
+    transform: translateY(calc(-1px * var(--pixel-size)));
 }
 
 mc-button[color|="green"] > button > span.text,
@@ -112,20 +111,20 @@ mc-button[tall|="true"] > * {
     height: inherit;
 }
 mc-button[tall|="true"] > button > span.text {
-    transform: translateY(calc(10px * var(--pixel-size)));
+    transform: translateY(calc(6px * var(--pixel-size)));
 }
 mc-button[tall|="true"] > button:active > span.text {
-    transform: translateY(calc(12px * var(--pixel-size)));
-}
-mc-button[tall|="true"] > button:disabled:active > span.text {
-    transform: translateY(calc(10px * var(--pixel-size)));
-}
-mc-button[tall|="true"][color|="green"] > button > span.text {
-    transform: translateY(calc(6px * var(--pixel-size)));
-}
-mc-button[tall|="true"][color|="green"] > button:active > span.text {
     transform: translateY(calc(8px * var(--pixel-size)));
 }
-mc-button[tall|="true"][color|="green"] > button:disabled:active > span.text {
+mc-button[tall|="true"] > button:disabled:active > span.text {
     transform: translateY(calc(6px * var(--pixel-size)));
+}
+mc-button[tall|="true"][color|="green"] > button > span.text {
+    transform: translateY(calc(2px * var(--pixel-size)));
+}
+mc-button[tall|="true"][color|="green"] > button:active > span.text {
+    transform: translateY(calc(4px * var(--pixel-size)));
+}
+mc-button[tall|="true"][color|="green"] > button:disabled:active > span.text {
+    transform: translateY(calc(2px * var(--pixel-size)));
 }
