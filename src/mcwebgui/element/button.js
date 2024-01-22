@@ -2,17 +2,9 @@ MCWebGUI.Element.Button = {}
 
 MCWebGUI.Element.Button.GenerateCSS = function () {
     const colors = ["bland", "green", "red", "purple", "dark"];
-    const backgroundColors = {
-        "bland": ["", "", ""],
-        "green": ["", "", ""],
-        "red": ["", "", ""],
-        "purple": ["", "", ""],
-        "dark": ["", "", ""]
-    };
 
     for (let i=0;i<colors.length;i++) {
         MCWebGUI.GeneratedCSS.textContent += `mc-button[color|="${colors[i]}"]{--asset-normal:url("../../../assets/button/${colors[i]}.png");--asset-hover:url("../../../assets/button/${colors[i]}_hover.png");--asset-active:url("../../../assets/button/${colors[i]}_active.png");}`
-        MCWebGUI.GeneratedCSS.textContent += `mc-button[color|="${colors[i]}"]{}`
     };
     
     MCWebGUI.Log("Elements › Button", "gray", "Generated Button Color CSS.");

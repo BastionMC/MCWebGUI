@@ -1,7 +1,6 @@
 mc-input {
-    --non-repeating: url("../../../assets/input/input.png");
-    --vertically-repeating: url("../../../assets/input/input_vertical.png");
-    --horizontally-repeating: url("../../../assets/input/input_horizontal.png");
+    --asset-writable: url("../../../assets/input/writable.png");
+    --asset-disabled: url("../../../assets/input/disabled.png");
 
     --width: 160px;
 
@@ -15,29 +14,32 @@ mc-input > * {
     height: calc(24px * var(--pixel-size));
     max-height: calc(var(--width) * var(--pixel-size));
 
-    border: none;
-    padding: 0px;
-    --background-y: 8px;
-}
-mc-input:has(input:disabled) > * {
-    --non-repeating: url("../../../assets/input/disabled.png");
-    --vertically-repeating: url("../../../assets/input/disabled_vertical.png");
-    --horizontally-repeating: url("../../../assets/input/disabled_horizontal.png");
-    
     --background-y: 8px;
 }
 
 mc-input > input {
-    height: inherit;
-    width: 100%;
-    max-width: calc((var(--width) * var(--pixel-size)) - (16px * var(--pixel-size)));
+    height: calc(100% - (8px * var(--pixel-size)));
+    width: calc(100% - (16px * var(--pixel-size)));
     
     caret-color: #4F913C;
     font-family: "mc-seven";
     color: white;
-    padding-left: calc(8px * var(--pixel-size));
-    padding-right: calc(8px * var(--pixel-size));
-    position: absolute;
+    padding-left: calc(4px * var(--pixel-size));
+    padding-right: calc(4px * var(--pixel-size));
+
+    border-width: calc(4px * var(--pixel-size));
+    border-image: var(--asset-writable) 4;
+
+    border-radius: 0px !important;
+
+    background-image: var(--asset-writable);
+    background-position-x: calc(-4px * var(--pixel-size));
+    background-position-y: calc(-4px * var(--pixel-size));
+    background-size: calc(12px * var(--pixel-size));
+}
+mc-input > input:disabled {
+    border-image: var(--asset-disabled) 4;
+    background-image: var(--asset-disabled);
 }
 mc-input > input::placeholder {
     color: #B1B2B5;

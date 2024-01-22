@@ -35,7 +35,12 @@ mc-button > button {
 
     border-width: calc(4px * var(--pixel-size));
     border-image: var(--asset-normal) 4;
-    background-image: var(--background-normal);
+
+    background-image: var(--asset-normal);
+    background-position-x: calc(-4px * var(--pixel-size));
+    background-position-y: calc(-4px * var(--pixel-size));
+    background-size: calc(12px * var(--pixel-size));
+    
 }
 
 mc-button > button > span.text {
@@ -45,6 +50,8 @@ mc-button > button > span.text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    padding-left: calc(2px * var(--pixel-size));
+    padding-right: calc(2px * var(--pixel-size));
 }
 mc-button > button:active > span.text {
     transform: translateY(calc(5px * var(--pixel-size)));
@@ -85,18 +92,17 @@ mc-button > button:disabled > span.text {
 
 mc-button > button:hover {
     border-image: var(--asset-hover) 4;
-    background-color: var(--background-hover);
+    background-image: var(--asset-hover);
 }
 mc-button > button:active {
     border-image: var(--asset-active) 4;
-    background-color: var(--background-active);
+    background-image: var(--asset-active);
 }
 mc-button > button:disabled {
     --asset-normal: var(--asset-disabled);
     --asset-hover: var(--asset-disabled);
     --asset-active: var(--asset-disabled);
-
-    background-color: var(--background-disabled);
+    background-image: var(--asset-disabled);
 }
 
 mc-button[tall|="true"] {
