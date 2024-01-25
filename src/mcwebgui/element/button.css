@@ -47,6 +47,7 @@ mc-button > button > span.text {
     white-space: nowrap;
     padding-left: calc(2px * var(--pixel-size));
     padding-right: calc(2px * var(--pixel-size));
+    color: #1e1e1f;
 }
 mc-button > button:active > span.text {
     transform: translateY(calc(5px * var(--pixel-size)));
