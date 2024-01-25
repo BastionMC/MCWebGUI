@@ -1,0 +1,125 @@
+mc-select {
+    --normal: url("../../../assets/select/bland.png");
+    --hover: url("../../../assets/select/bland_hover.png");
+    --active: url("../../../assets/select/bland_active.png");
+    --disabled: url("../../../assets/select/disabled.png");
+
+    --width: 160px;
+
+    display: block;
+    user-select: none;
+}
+
+mc-select {
+    width: calc(var(--width) * var(--pixel-size));
+    max-width: calc(var(--width) * var(--pixel-size));
+    height: calc(24px * var(--pixel-size));
+    max-height: calc(var(--width) * var(--pixel-size));
+
+    border: none;
+    padding: 0px;
+}
+mc-select > select {
+    width: 100%;
+    height: 100%;
+
+    padding: 0px;
+    
+    display: flex;
+    justify-content: center;
+
+    border-width: calc(4px * var(--pixel-size));
+    border-image: var(--normal) 4;
+
+    background-image: var(--normal);
+    background-position-x: calc((var(--width) * -1) * var(--pixel-size));
+    background-position-y: calc((var(--width) * -1) * var(--pixel-size));
+    background-size: calc((var(--width) * 3) * var(--pixel-size));
+    background-repeat: repeat;
+}
+
+mc-select > select > span.text {
+    font-family: "mc-seven";
+    transform: translateY(calc(3px * var(--pixel-size)));
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: calc(2px * var(--pixel-size));
+    padding-right: calc(2px * var(--pixel-size));
+    color: #1e1e1f;
+}
+mc-select > select:active > span.text {
+    transform: translateY(calc(5px * var(--pixel-size)));
+}
+mc-select > select:active:disabled > span.text {
+    transform: translateY(calc(3px * var(--pixel-size)));
+}
+mc-select[color|="green"] > select > span.text {
+    font-size: calc(12px * var(--pixel-size));
+    font-family: "mc-ten";
+    transform: translateY(calc(-1px * var(--pixel-size)));
+    text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #2A5D1B;
+}
+mc-select[color|="green"] > select:hover > span.text {
+    text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #1D4614;
+}
+mc-select[color|="green"] > select:active > span.text {
+    transform: translateY(calc(1px * var(--pixel-size)));
+    text-shadow: calc(1px * var(--pixel-size)) calc(1px * var(--pixel-size)) 0px #14360D;
+}
+mc-select[color|="green"] > select:active:disabled > span.text {
+    transform: translateY(calc(-1px * var(--pixel-size)));
+}
+
+mc-select[color|="green"] > select > span.text,
+mc-select[color|="purple"] > select > span.text,
+mc-select[color|="red"] > select > span.text,
+mc-select[color|="dark"] > select > span.text {
+    color: white;
+}
+
+mc-select > select:disabled > span.text {
+    color: #48494A;
+    text-shadow: none !important;
+}
+
+mc-select > select:hover {
+    border-image: var(--hover) 4;
+    background-image: var(--hover);
+}
+mc-select > select:active {
+    border-image: var(--active) 4;
+    background-image: var(--active);
+}
+mc-select > select:disabled {
+    --normal: var(--disabled);
+    --hover: var(--disabled);
+    --active: var(--disabled);
+    background-image: var(--disabled);
+}
+
+mc-select[tall|="true"] {
+    height: calc(30px * var(--pixel-size));
+}
+mc-select[tall|="true"] > * {
+    height: inherit;
+}
+mc-select[tall|="true"] > select > span.text {
+    transform: translateY(calc(6px * var(--pixel-size)));
+}
+mc-select[tall|="true"] > select:active > span.text {
+    transform: translateY(calc(8px * var(--pixel-size)));
+}
+mc-select[tall|="true"] > select:disabled:active > span.text {
+    transform: translateY(calc(6px * var(--pixel-size)));
+}
+mc-select[tall|="true"][color|="green"] > select > span.text {
+    transform: translateY(calc(2px * var(--pixel-size)));
+}
+mc-select[tall|="true"][color|="green"] > select:active > span.text {
+    transform: translateY(calc(4px * var(--pixel-size)));
+}
+mc-select[tall|="true"][color|="green"] > select:disabled:active > span.text {
+    transform: translateY(calc(2px * var(--pixel-size)));
+}
