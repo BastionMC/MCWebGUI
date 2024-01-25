@@ -8,6 +8,8 @@ const MCWebGUIImporter = {
 
 import MCWebGUIImporterList from "./import.json" assert {type: "json"};
 
+// firefox is unsupported haha
+
 if (MCWebGUIImporter.Desktop) {
     MCWebGUILog("Importer", "orange", "Loading in Desktop-associated files.");
 };
