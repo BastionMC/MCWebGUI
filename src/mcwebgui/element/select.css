@@ -2,7 +2,17 @@ mc-select {
     --normal: url("../../../assets/select/bland.png");
     --hover: url("../../../assets/select/bland_hover.png");
     --active: url("../../../assets/select/bland_active.png");
+    --active: url("../../../assets/select/bland_active.png");
+
     --disabled: url("../../../assets/select/disabled.png");
+    --active: url("../../../assets/select/bland_active.png");
+    --disabled: url("../../../assets/select/disabled.png");
+    --active: url("../../../assets/select/bland_active.png");
+
+    --disabled: url("../../../assets/select/disabled.png");
+    --active: url("../../../assets/select/bland_active.png");
+    --disabled: url("../../../assets/select/disabled.png");
+    --active: url("../../../assets/select/bland_active.png");
 
     --width: 160px;
 
