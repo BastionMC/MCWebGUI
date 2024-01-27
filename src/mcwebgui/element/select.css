@@ -6,13 +6,13 @@ mc-select {
 
     --dark: url("../../../assets/select/disabled.png");
     --dark-hover: url("../../../assets/select/bland_active.png");
-    --dark-disabled: url("../../../assets/select/disabled.png");
+    --dark-active: url("../../../assets/select/disabled.png");
     --dark-selected: url("../../../assets/select/bland_active.png");
 
     --disabled: url("../../../assets/select/disabled.png");
-    --active: url("../../../assets/select/bland_active.png");
-    --disabled: url("../../../assets/select/disabled.png");
-    --active: url("../../../assets/select/bland_active.png");
+    --disabled-hover: url("../../../assets/select/bland_active.png");
+    --disabled-active: url("../../../assets/select/disabled.png");
+    --disabled-selected: url("../../../assets/select/bland_active.png");
 
     --width: 160px;
 
