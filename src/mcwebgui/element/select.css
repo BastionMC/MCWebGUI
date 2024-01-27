@@ -1,13 +1,13 @@
 mc-select {
     --normal: url("../../../assets/select/bland.png");
-    --hover: url("../../../assets/select/bland_hover.png");
-    --active: url("../../../assets/select/bland_active.png");
-    --active: url("../../../assets/select/bland_active.png");
+    --normal-hover: url("../../../assets/select/bland_hover.png");
+    --normal-active: url("../../../assets/select/bland_active.png");
+    --normal-selected: url("../../../assets/select/bland_active.png");
 
-    --disabled: url("../../../assets/select/disabled.png");
-    --active: url("../../../assets/select/bland_active.png");
-    --disabled: url("../../../assets/select/disabled.png");
-    --active: url("../../../assets/select/bland_active.png");
+    --dark: url("../../../assets/select/disabled.png");
+    --dark-hover: url("../../../assets/select/bland_active.png");
+    --dark-disabled: url("../../../assets/select/disabled.png");
+    --dark-selected: url("../../../assets/select/bland_active.png");
 
     --disabled: url("../../../assets/select/disabled.png");
     --active: url("../../../assets/select/bland_active.png");
