@@ -6,19 +6,13 @@ const MCWebGUIImporter = {
     "Desktop": document.querySelector("desktop") !== null
 };
 
-let MCWebGUIImporterList = {}
+let MCWebGUIImporterList = null
 
-    await fetch("src/mcwebgui/import.json")
-    .then(response => response.json())
-    .then(data => {
-        MCWebGUIImporterList = data;
-        console.log(MCWebGUIImporterList)
-    });
-
-console.log(MCWebGUIImporterList)
-
-// firefox is unsupported haha
-// nvm, it finally is
+await fetch("src/mcwebgui/import.json")
+.then(response => response.json())
+.then(data => {
+    MCWebGUIImporterList = data;
+});
 
 if (MCWebGUIImporter.Desktop) {
     MCWebGUILog("Importer", "orange", "Loading in Desktop-associated files.");
@@ -52,4 +46,4 @@ window.onerror = function() {
 };
 setTimeout(function () {
     window.onerror = null;
-}, 100);
+}, 200);

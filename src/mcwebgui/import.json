@@ -9,9 +9,7 @@
         "src/mcwebgui/element/switch.js",
         "src/mcwebgui/element/slider.js",
         "src/mcwebgui/element/checkbox.js",
-        "src/mcwebgui/element/select.js",
-        
-        "src/mcwebgui/interface/scroll.js"
+        "src/mcwebgui/element/select.js"
     ],
     "desktop_scripts": [
     ],
@@ -24,8 +22,6 @@
         "src/mcwebgui/element/switch.css",
         "src/mcwebgui/element/slider.css",
         "src/mcwebgui/element/checkbox.css",
-        "src/mcwebgui/element/select.css",
-
-        "src/mcwebgui/interface/scroll.css"
+        "src/mcwebgui/element/select.css"
     ]
 }
