@@ -1,4 +1,4 @@
-mc-select {
+/* mc-select {
     --normal: url("../../../assets/select/bland.png");
     --normal-hover: url("../../../assets/select/bland_hover.png");
     --normal-active: url("../../../assets/select/bland_active.png");
@@ -132,4 +132,4 @@ mc-select[tall|="true"][color|="green"] > select:active > span.text {
 }
 mc-select[tall|="true"][color|="green"] > select:disabled:active > span.text {
     transform: translateY(calc(2px * var(--pixel-size)));
-}
+} */
