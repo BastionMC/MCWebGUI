@@ -6,29 +6,37 @@ const MCWebGUIImporter = {
     "Desktop": document.querySelector("desktop") !== null
 };
 
-import MCWebGUIImporterList from "./import.json" assert {type: "json"};
+let MCWebGUIImporterList = {}
+
+    await fetch("src/mcwebgui/import.json")
+    .then(response => response.json())
+    .then(data => {
+        MCWebGUIImporterList = data;
+        console.log(MCWebGUIImporterList)
+    });
+
+console.log(MCWebGUIImporterList)
 
 // firefox is unsupported haha
+// nvm, it finally is
 
 if (MCWebGUIImporter.Desktop) {
     MCWebGUILog("Importer", "orange", "Loading in Desktop-associated files.");
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-    for (let i=0; i<MCWebGUIImporterList.scripts.length; i++) {
-        let script = document.createElement("script");
-        script.src = MCWebGUIImporterList.scripts[i];
-        script.id = "mcwebgui-script";
-        document.body.appendChild(script);
-    };
+for (let i=0; i<MCWebGUIImporterList.scripts.length; i++) {
+    let script = document.createElement("script");
+    script.src = MCWebGUIImporterList.scripts[i];
+    script.id = "mcwebgui-script";
+    document.body.appendChild(script);
+};
 
-    let stylesheets = document.createElement("style");
-    for (let i=0; i<MCWebGUIImporterList.stylesheets.length; i++) {
-        stylesheets.textContent += "@import url(" + MCWebGUIImporterList.stylesheets[i] + ");";
-    };
-    stylesheets.id = "mcwebgui-stylesheets";
-    document.head.appendChild(stylesheets);
-});
+let stylesheets = document.createElement("style");
+for (let i=0; i<MCWebGUIImporterList.stylesheets.length; i++) {
+    stylesheets.textContent += "@import url(" + MCWebGUIImporterList.stylesheets[i] + ");";
+};
+stylesheets.id = "mcwebgui-stylesheets";
+document.head.appendChild(stylesheets);
 
 window.onerror = function() {
     let errorReloads = localStorage.getItem("MWGReloadPageHandler") || 0;
