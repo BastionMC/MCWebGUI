@@ -30,31 +30,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(stylesheets);
 });
 
-// Sometimes loading MCWebGUI can go wrong, but simply reloading
-// the page seems to fix the issue. Just let this be unless it's
-// causing problems, k? - Jae
-
-// To be honest, this might cause flashing lights if the user of
-// MCWebGUI screws something up in the first 150 microseconds
-// of the document being loaded. Maybe add a temporary cookie to
-// avoid refreshing more then a certain ammount, for sample,
-// "5" should work. Do this later.
-
 window.onerror = function() {
     let errorReloads = localStorage.getItem("MWGReloadPageHandler") || 0;
-    localStorage.setItem("MWGReloadPageHandler", 0);
 
-    if (errorReloads < 5) {
+    if (errorReloads < 10) {
         MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
         localStorage.setItem("MWGReloadPageHandler", errorReloads + 1);
         location.reload();
     } else {
-        MCWebGUILog("Error Handling", "firebrick", "Tried to reload page, in hopes of fixing an error, but overstepped reload limit (5).");
+        MCWebGUILog("Error Handling", "firebrick", "Tried to reload page, in hopes of fixing an error, but overstepped reload limit (10).");
         localStorage.setItem("MWGReloadPageHandler", 0);
-    }
+    };
 };
 setTimeout(function () {
     window.onerror = null;
-}, 100)
-
-erower
+}, 100);
