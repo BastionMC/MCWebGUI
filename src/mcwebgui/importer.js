@@ -41,9 +41,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // "5" should work. Do this later.
 
 window.onerror = function() {
-    MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
-    location.reload();
+    let errorReloads = localStorage.getItem("MWGReloadPageHandler") || 0;
+    localStorage.setItem("MWGReloadPageHandler", 0);
+
+    if (errorReloads < 5) {
+        MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
+        localStorage.setItem("MWGReloadPageHandler", errorReloads + 1);
+        location.reload();
+    } else {
+        MCWebGUILog("Error Handling", "firebrick", "Tried to reload page, in hopes of fixing an error, but overstepped reload limit (5).");
+        localStorage.setItem("MWGReloadPageHandler", 0);
+    }
 };
 setTimeout(function () {
     window.onerror = null;
 }, 100)
+
+erower
