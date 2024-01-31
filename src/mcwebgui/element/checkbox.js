@@ -5,8 +5,8 @@ class MCCheckbox extends HTMLElement {
         super();
 
         this.innerHTML = "<input type=\"checkbox\">";
-        this.querySelector("input").disabled = this.getAttribute("disabled");
-        this.querySelector("input").checked = this.getAttribute("checked");
+        this.querySelector("input").disabled = this.getAttribute("disabled") || false;
+        this.querySelector("input").checked = this.getAttribute("checked") || true;
     }
 }
 

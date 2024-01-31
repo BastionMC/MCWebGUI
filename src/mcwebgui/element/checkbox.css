@@ -22,11 +22,9 @@ mc-checkbox > input {
 
     z-index: 1;
 }
-mc-checkbox > * {
+mc-checkbox > input {
     position: relative;
     display: block;
-}
-mc-checkbox > input {
     opacity: 0;
 }
 

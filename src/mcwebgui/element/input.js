@@ -5,8 +5,8 @@ class MCInput extends HTMLElement {
         super();
 
         this.innerHTML = "<input></input>";
-        this.querySelector("input").disabled = this.getAttribute("disabled");
-        this.querySelector("input").placeholder = this.getAttribute("placeholder");
+        this.querySelector("input").disabled = this.getAttribute("disabled") || false;
+        this.querySelector("input").placeholder = this.getAttribute("placeholder") || "";
     }
 }
 

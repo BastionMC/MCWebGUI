@@ -5,8 +5,8 @@ class MCSwitch extends HTMLElement {
         super();
 
         this.innerHTML = "<input type=\"checkbox\"><span class=\"knob\"></span>";
-        this.querySelector("input").disabled = this.getAttribute("disabled");
-        this.querySelector("input").checked = this.getAttribute("toggled");
+        this.querySelector("input").disabled = this.getAttribute("disabled") || false;
+        this.querySelector("input").checked = this.getAttribute("toggled") || false;
     }
 }
 

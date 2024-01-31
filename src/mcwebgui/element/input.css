@@ -13,6 +13,7 @@ mc-input > * {
     max-width: calc(var(--width) * var(--pixel-size));
     height: calc(24px * var(--pixel-size));
     max-height: calc(var(--width) * var(--pixel-size));
+    border-radius: 0px !important;
 
     --background-y: 8px;
 }
@@ -29,8 +30,6 @@ mc-input > input {
 
     border-width: calc(4px * var(--pixel-size));
     border-image: var(--writable) 4;
-
-    border-radius: 0px !important;
 
     background-image: var(--writable);
     background-position-x: calc((var(--width) * -1) * var(--pixel-size));

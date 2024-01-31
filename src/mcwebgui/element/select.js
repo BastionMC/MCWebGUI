@@ -9,7 +9,6 @@ class MCSelect extends HTMLElement {
         this.innerHTML = "<select><span class=\"text\"></span></select>";
         let innerSelect = this.querySelector("select");
         innerSelect.disabled = this.getAttribute("disabled");
-        // innerSelect.querySelector("span").innerHTML = text || "";
     }
 }
 
