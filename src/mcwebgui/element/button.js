@@ -29,13 +29,13 @@ MCButton.prototype.setTextContent = function (text) {
     this.querySelector("button > span.text").textContent = text || this.querySelector("button > span.text").textContent;
 };
 MCButton.prototype.getTextContent = function () {
-    return this.querySelector("button > span.text").textContent || null;
+    return this.querySelector("button > span.text").textContent || "";
 };
 MCButton.prototype.setInnerHTML = function (html) {
     this.querySelector("button > span.text").innerHTML = html || this.querySelector("button > span.text").innerHTML;
 };
 MCButton.prototype.getInnerHTML = function () {
-    return this.querySelector("button > span.text").innerHTML || null;
+    return this.querySelector("button > span.text").innerHTML || "";
 };
 MCButton.prototype.setDisabled = function (disabled) {
     this.querySelector("button").disabled = disabled || false;
