@@ -21,8 +21,27 @@ class MCButton extends HTMLElement {
         this.innerHTML = "<button><span class=\"text\"></span></button>";
         let innerButton = this.querySelector("button");
         innerButton.disabled = this.getAttribute("disabled") || false;
-        innerButton.querySelector(".text").innerHTML = text || "";
-    }
-}
+        innerButton.querySelector("span.text").innerHTML = text || "";
+    };
+};
+
+MCButton.prototype.setTextContent = function (text) {
+    this.querySelector("button > span.text").textContent = text || this.querySelector("button > span.text").textContent;
+};
+MCButton.prototype.getTextContent = function () {
+    return this.querySelector("button > span.text").textContent || null;
+};
+MCButton.prototype.setInnerHTML = function (html) {
+    this.querySelector("button > span.text").innerHTML = html || this.querySelector("button > span.text").innerHTML;
+};
+MCButton.prototype.getInnerHTML = function () {
+    return this.querySelector("button > span.text").innerHTML || null;
+};
+MCButton.prototype.setDisabled = function (disabled) {
+    this.querySelector("button").disabled = disabled || false;
+};
+MCButton.prototype.getDisabled = function () {
+    return this.querySelector("button").disabled || false;
+};
 
 customElements.define("mc-button", MCButton);
