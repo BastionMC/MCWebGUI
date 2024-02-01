@@ -1,7 +1,7 @@
 {
     "scripts": [
-        "src/mcwebgui/configurable.js",
         "src/mcwebgui/main.js",
+        "src/mcwebgui/configurable.js",
         "src/mcwebgui/element.js",
 
         "src/mcwebgui/element/button.js",
@@ -14,8 +14,8 @@
     "desktop_scripts": [
     ],
     "stylesheets": [
-        "src/mcwebgui/configurable.css",
         "src/mcwebgui/base.css",
+        "src/mcwebgui/configurable.css",
 
         "src/mcwebgui/element/button.css",
         "src/mcwebgui/element/input.css",

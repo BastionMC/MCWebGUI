@@ -35,12 +35,12 @@ document.head.appendChild(stylesheets);
 window.onerror = function() {
     let errorReloads = localStorage.getItem("MWGReloadPageHandler") || 0;
 
-    if (errorReloads < 10) {
+    if (errorReloads < 20) {
         MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
         localStorage.setItem("MWGReloadPageHandler", errorReloads + 1);
         location.reload();
     } else {
-        MCWebGUILog("Error Handling", "firebrick", "Tried to reload page, in hopes of fixing an error, but overstepped reload limit (10).");
+        MCWebGUILog("Error Handling", "firebrick", "Tried to reload page, in hopes of fixing an error, but overstepped reload limit (20).");
         localStorage.setItem("MWGReloadPageHandler", 0);
     };
 };

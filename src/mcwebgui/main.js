@@ -11,4 +11,9 @@ if (document.title == "") {
 
 MCWebGUI.GeneratedCSS = document.createElement("style");
 MCWebGUI.GeneratedCSS.id = "mcwebgui-generated";
+
+MCWebGUI.ConfiguredCSS = document.createElement("style");
+MCWebGUI.ConfiguredCSS.id = "mcwebgui-configured"
+
 document.head.appendChild(MCWebGUI.GeneratedCSS);
+document.head.appendChild(MCWebGUI.ConfiguredCSS);
