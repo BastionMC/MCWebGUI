@@ -9,6 +9,7 @@ MCWebGUI.Element.Slider.SetupElement = function (slider, initialValue) {
     let max = parseFloat(slider.getAttribute("max")) || 100;
 
     function setKnobPosition(value) {
+        // this isnt even math anymore this is meth 💀
         knob.style.transform = `translateY(calc(4px * var(--pixel-size))) translateX(calc(((var(--width) * var(--pixel-size)) * ((${value} - ${min}) / (${max} - ${min}))) - (8px * var(--pixel-size)))`;
         range.style.width = `calc((var(--width) * var(--pixel-size)) * ((${value} - ${min}) / (${max} - ${min})))`;
     };
@@ -21,8 +22,12 @@ MCWebGUI.Element.Slider.SetupElement = function (slider, initialValue) {
         startSlide(e);
     });
 
-    document.addEventListener("mousemove", slide);
-    document.addEventListener("mouseup", stopSlide);
+    document.addEventListener("mousemove", function (e) {
+        (isDragging) && updateSliderPosition(e.clientX);
+    });
+    document.addEventListener("mouseup", function () {
+        isDragging = false;
+    });
 
     function startSlide(e) {
         e.preventDefault();
@@ -33,16 +38,6 @@ MCWebGUI.Element.Slider.SetupElement = function (slider, initialValue) {
 
         isDragging = true;
         updateSliderPosition(e.clientX);
-    };
-
-    function slide(e) {
-        if (isDragging) {
-            updateSliderPosition(e.clientX);
-        };
-    };
-
-    function stopSlide() {
-        isDragging = false;
     };
 
     function updateSliderPosition(clientX) {
@@ -68,7 +63,7 @@ class MCSlider extends HTMLElement {
         const min = this.getAttribute("min") || 0;
         const linesContainer = this.querySelector(".lines");
 
-        if (this.getAttribute("lines") == "true") {
+        if (this.getAttribute("lines") == true) {
             linesContainer.innerHTML = "<span></span>".repeat(max);
             for (let i=0;i<linesContainer.children.length-1-min;i++) {
                 linesContainer.children[i].style.transform = `translateX(calc(((((var(--width) * var(--pixel-size)) / (${max} - ${min})) * ${i+1})) - (0.5px * var(--pixel-size)))`;
