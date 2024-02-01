@@ -10,4 +10,17 @@ class MCSwitch extends HTMLElement {
     }
 }
 
+MCSwitch.prototype.setSwitched = function (checked) {
+    this.querySelector("input").checked = checked || false;
+};
+MCSwitch.prototype.getSwitched = function () {
+    return this.querySelector("input").checked || false;
+};
+MCSwitch.prototype.setDisabled = function (disabled) {
+    this.querySelector("input").disabled = disabled || false;
+};
+MCSwitch.prototype.getDisabled = function () {
+    return this.querySelector("input").disabled || false;
+};
+
 customElements.define("mc-switch", MCSwitch);

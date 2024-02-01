@@ -78,4 +78,11 @@ class MCSlider extends HTMLElement {
     };
 };
 
+MCSlider.prototype.setDisabled = function (disabled) {
+    this.setAttribute("disabled") = disabled || false;
+};
+MCSlider.prototype.getDisabled = function () {
+    return this.getAttribute("disabled") || false;
+};
+
 customElements.define("mc-slider", MCSlider);
