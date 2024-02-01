@@ -63,6 +63,9 @@ class MCSlider extends HTMLElement {
         const min = this.getAttribute("min") || 0;
         const linesContainer = this.querySelector(".lines");
 
+        this.removeAttribute("max");
+        this.removeAttribute("min");
+
         if (this.getAttribute("lines") == "true") {
             linesContainer.innerHTML = "<span></span>".repeat(max);
             for (let i=0;i<linesContainer.children.length-1-min;i++) {
@@ -102,5 +105,13 @@ MCSlider.prototype.setDisabled = function (disabled) {
 MCSlider.prototype.getDisabled = function () {
     return this.getAttribute("disabled") || false;
 };
+// .setValue
+MCSlider.prototype.getValue = function () {
+    return this.getAttribute("value") || 0;
+}
+// .setMinValue
+// .getMinValue
+// .setMaxValue
+// .getMaxValue
 
 customElements.define("mc-slider", MCSlider);
