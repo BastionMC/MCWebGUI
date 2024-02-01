@@ -1,4 +1,4 @@
-/* mc-select {
+mc-select {
     --normal: url("../../../assets/select/bland.png");
     --normal-hover: url("../../../assets/select/bland_hover.png");
     --normal-active: url("../../../assets/select/bland_active.png");
@@ -14,11 +14,13 @@
     --disabled-active: url("../../../assets/select/disabled.png");
     --disabled-selected: url("../../../assets/select/bland_active.png");
 
-    --width: 160px;
+    --width: 320px;
 
     display: block;
     user-select: none;
 }
+
+/* 
 
 mc-select {
     width: calc(var(--width) * var(--pixel-size));

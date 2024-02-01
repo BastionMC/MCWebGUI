@@ -63,7 +63,7 @@ class MCSlider extends HTMLElement {
         const min = this.getAttribute("min") || 0;
         const linesContainer = this.querySelector(".lines");
 
-        if (this.getAttribute("lines") == true) {
+        if (this.getAttribute("lines") == "true") {
             linesContainer.innerHTML = "<span></span>".repeat(max);
             for (let i=0;i<linesContainer.children.length-1-min;i++) {
                 linesContainer.children[i].style.transform = `translateX(calc(((((var(--width) * var(--pixel-size)) / (${max} - ${min})) * ${i+1})) - (0.5px * var(--pixel-size)))`;
