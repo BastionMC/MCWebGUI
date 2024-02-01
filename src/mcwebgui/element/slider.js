@@ -72,12 +72,34 @@ class MCSlider extends HTMLElement {
             for (let i=0;i<linesContainer.children.length-1-min;i++) {
                 linesContainer.children[i].style.transform = `translateX(calc(((((var(--width) * var(--pixel-size)) / (${max} - ${min})) * ${i+1})) - (0.5px * var(--pixel-size)))`;
             };
+            this.removeAttribute("lines")
         } else {
             linesContainer.remove();
         };
     };
 };
 
+MCSlider.prototype.setLines = function (lines) {
+    const max = this.getAttribute("max") || 100;
+    const min = this.getAttribute("min") || 0;
+
+    let linesContainer = document.createElement("span");
+    linesContainer.className = "lines";
+
+    if (lines) {
+        linesContainer.innerHTML = "<span></span>".repeat(max);
+        for (let i=0;i<linesContainer.children.length-1-min;i++) {
+            linesContainer.children[i].style.transform = `translateX(calc(((((var(--width) * var(--pixel-size)) / (${max} - ${min})) * ${i+1})) - (0.5px * var(--pixel-size)))`;
+        };
+            
+        this.appendChild(linesContainer);
+    } else {
+        this.querySelector("span.lines").remove();
+    };
+};
+MCSlider.prototype.getLines = function () {
+    return this.querySelector("span.lines") != undefined;
+}
 MCSlider.prototype.setDisabled = function (disabled) {
     this.setAttribute("disabled") = disabled || false;
 };
