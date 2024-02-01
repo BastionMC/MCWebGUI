@@ -32,12 +32,12 @@ for (let i=0; i<MCWebGUIImporterList.stylesheets.length; i++) {
 stylesheets.id = "mcwebgui-stylesheets";
 document.head.appendChild(stylesheets);
 
-window.onerror = function() {
-    let errorReloads = localStorage.getItem("MWGReloadPageHandler") || 0;
+MCWebGUIImporter.ErrorReloads = localStorage.getItem("MWGReloadPageHandler") || 20;
 
-    if (errorReloads < 20) {
+window.onerror = function() {
+    if (MCWebGUIImporter.ErrorReloads < 20) {
         MCWebGUILog("Error Handling", "firebrick", "An error ocurred while loading, attempting to reload the page.");
-        localStorage.setItem("MWGReloadPageHandler", errorReloads + 1);
+        localStorage.setItem("MWGReloadPageHandler", MCWebGUIImporter.ErrorReloads + 1);
         location.reload();
     } else {
         MCWebGUILog("Error Handling", "firebrick", "Tried to reload page, in hopes of fixing an error, but overstepped reload limit (20).");
@@ -46,4 +46,6 @@ window.onerror = function() {
 };
 setTimeout(function () {
     window.onerror = null;
-}, 200);
+}, 500);
+
+localStorage.setItem("MWGReloadPageHandler", 0);

@@ -1,11 +1,12 @@
 MCWebGUI.Element.Slider = {};
 
-MCWebGUI.Element.Slider.SetupElement = function (slider, knob, initialValue) {
+MCWebGUI.Element.Slider.SetupElement = function (slider, initialValue) {
     const range = slider.querySelector(".range");
     let isDragging = false;
+    let knob = slider.querySelector(".knob");
 
-    const min = parseFloat(slider.getAttribute("min")) || 0;
-    const max = parseFloat(slider.getAttribute("max")) || 100;
+    let min = parseFloat(slider.getAttribute("min")) || 0;
+    let max = parseFloat(slider.getAttribute("max")) || 100;
 
     function setKnobPosition(value) {
         knob.style.transform = `translateY(calc(4px * var(--pixel-size))) translateX(calc(((var(--width) * var(--pixel-size)) * ((${value} - ${min}) / (${max} - ${min}))) - (8px * var(--pixel-size)))`;
@@ -61,7 +62,7 @@ class MCSlider extends HTMLElement {
         super();
 
         this.innerHTML = "<span class=\"background\"></span><span class=\"range\"></span><span class=\"knob\"></span><span class=\"lines\"></span>";
-        MCWebGUI.Element.Slider.SetupElement(this, this.querySelector(".knob"), this.getAttribute("value"));
+        MCWebGUI.Element.Slider.SetupElement(this, this.getAttribute("value"));
 
         const max = this.getAttribute("max") || 100;
         const min = this.getAttribute("min") || 0;
