@@ -1,18 +1,18 @@
 mc-select {
-    --normal: url("../../../assets/select/bland.png");
-    --normal-hover: url("../../../assets/select/bland_hover.png");
-    --normal-active: url("../../../assets/select/bland_active.png");
-    --normal-selected: url("../../../assets/select/bland_active.png");
+    --normal: url("../../../assets/select/normal.png");
+    --normal-hover: url("../../../assets/select/normal_hover.png");
+    --normal-active: url("../../../assets/select/normal_active.png");
+    --normal-selected: url("../../../assets/select/normal_selected.png");
 
     --dark: url("../../../assets/select/disabled.png");
-    --dark-hover: url("../../../assets/select/bland_active.png");
+    --dark-hover: url("../../../assets/select/normal_active.png");
     --dark-active: url("../../../assets/select/disabled.png");
-    --dark-selected: url("../../../assets/select/bland_active.png");
+    --dark-selected: url("../../../assets/select/normal_active.png");
 
     --disabled: url("../../../assets/select/disabled.png");
-    --disabled-hover: url("../../../assets/select/bland_active.png");
+    --disabled-hover: url("../../../assets/select/normal_active.png");
     --disabled-active: url("../../../assets/select/disabled.png");
-    --disabled-selected: url("../../../assets/select/bland_active.png");
+    --disabled-selected: url("../../../assets/select/normal_active.png");
 
     --width: 320px;
 
@@ -32,7 +32,7 @@ mc-select {
     display: flex;
 }
 mc-select > mc-button {
-    --width: 100%;
+    --width: 160px;
     height: 100%;
     
     /* margin-left: calc(-0.5px * var(--pixel-size)); */
@@ -41,6 +41,10 @@ mc-select > mc-button {
 mc-select > mc-button > button {
     border-image: var(--normal) 4;
     background-image: var(--normal);
+}
+mc-select > mc-button > button#selected {
+    border-image: var(--normal-selected) 4;
+    background-image: var(--normal-selected);
 }
 
 /* 
