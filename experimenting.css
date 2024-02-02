@@ -2,3 +2,7 @@ divider {
     width: 100%;
     height: 0px;
 }
+p {
+    text-align: center;
+    align-self: center;
+}

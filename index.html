@@ -114,17 +114,20 @@
     
     <divider></divider>
 
-    <h2>Pixel size slider</h2>
-    <divider></divider>
+    <p id="TF-PIXEL-TEXT">Pixel size (Might be scuffed): </p>
     <mc-slider id="TF-PIXEL-SLIDER" min="1" max="4" value="2" lines="true"></mc-slider>
 
     <script>
         const TFPixelSlider = document.getElementById("TF-PIXEL-SLIDER");
+        const TFPixelText = document.getElementById("TF-PIXEL-TEXT");
+        
         TFPixelSlider.addEventListener("mouseup", function () {
             MCWebGUI.SetPixelSize(TFPixelSlider.getValue());
+            TFPixelText.textContent = "Pixel size (Might be scuffed): " + MCWebGUI.GetPixelSize();
         });
         TFPixelSlider.addEventListener("mouseleave", function () {
             MCWebGUI.SetPixelSize(TFPixelSlider.getValue());
+            TFPixelText.textContent = "Pixel size (Might be scuffed): " + MCWebGUI.GetPixelSize();
         });
     </script>
 </body>
