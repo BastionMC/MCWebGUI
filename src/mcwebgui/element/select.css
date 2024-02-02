@@ -62,6 +62,9 @@ mc-select[color|="dark"] > mc-button > button {
     --normal-active: var(--dark-active);
     --normal-selected: var(--dark-selected);
 }
+mc-select[color|="dark"] > mc-button > button > span.text {
+    color: white;
+}
 mc-select > mc-button > button:disabled {
     --normal: var(--disabled);
     --normal-hover: var(--disabled-hover);
@@ -71,4 +74,19 @@ mc-select > mc-button > button:disabled {
 
 mc-select[tall|="true"] {
     height: calc(30px * var(--pixel-size));
+}
+mc-select[tall|="true"] > * {
+    height: inherit;
+}
+mc-select[tall|="true"] > mc-button > button > span.text {
+    transform: translateY(calc(6px * var(--pixel-size)));
+}
+mc-select[tall|="true"] > mc-button > button:active > span.text {
+    transform: translateY(calc(8px * var(--pixel-size)));
+}
+mc-select[tall|="true"] > mc-button > button:disabled:active > span.text {
+    transform: translateY(calc(6px * var(--pixel-size)));
+}
+mc-select[tall|="true"] > mc-button > button#selected > span.text {
+    transform: translateY(calc(8px * var(--pixel-size)));
 }
