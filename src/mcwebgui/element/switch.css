@@ -3,7 +3,6 @@ mc-switch {
     --slider: url("../../../assets/switch/slider.png");
     --disabled-off: url("../../../assets/switch/disabled_off.png");
     --disabled-on: url("../../../assets/switch/disabled_on.png");
-    --range: url("../../../assets/slider/range.png");
 
     display: block;
     background-image: var(--slider);
