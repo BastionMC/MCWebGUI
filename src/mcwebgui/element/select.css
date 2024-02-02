@@ -4,15 +4,15 @@ mc-select {
     --normal-active: url("../../../assets/select/normal_active.png");
     --normal-selected: url("../../../assets/select/normal_selected.png");
 
-    --dark: url("../../../assets/select/disabled.png");
-    --dark-hover: url("../../../assets/select/normal_active.png");
-    --dark-active: url("../../../assets/select/disabled.png");
-    --dark-selected: url("../../../assets/select/normal_active.png");
+    --dark: url("../../../assets/select/dark.png");
+    --dark-hover: url("../../../assets/select/dark_hover.png");
+    --dark-active: url("../../../assets/select/dark_active.png");
+    --dark-selected: url("../../../assets/select/dark_selected.png");
 
     --disabled: url("../../../assets/select/disabled.png");
-    --disabled-hover: url("../../../assets/select/normal_active.png");
+    --disabled-hover: url("../../../assets/select/disabled.png");
     --disabled-active: url("../../../assets/select/disabled.png");
-    --disabled-selected: url("../../../assets/select/normal_active.png");
+    --disabled-selected: url("../../../assets/select/disabled_selected.png");
 
     --width: 320px;
 
@@ -45,7 +45,7 @@ mc-select > mc-button > button:hover {
 }
 mc-select > mc-button > button:active {
     border-image: var(--normal-active) 4;
-    background-image: var(--normal);
+    background-image: var(--normal-active);
 }
 mc-select > mc-button > button#selected {
     border-image: var(--normal-selected) 4;
@@ -54,6 +54,19 @@ mc-select > mc-button > button#selected {
 mc-select > mc-button > button#selected > span.text {
     color: white;
     transform: translateY(calc(5px * var(--pixel-size)));
+}
+
+mc-select[color|="dark"] > mc-button > button {
+    --normal: var(--dark);
+    --normal-hover: var(--dark-hover);
+    --normal-active: var(--dark-active);
+    --normal-selected: var(--dark-selected);
+}
+mc-select > mc-button > button:disabled {
+    --normal: var(--disabled);
+    --normal-hover: var(--disabled-hover);
+    --normal-active: var(--disabled-active);
+    --normal-selected: var(--disabled-selected);
 }
 
 mc-select[tall|="true"] {

@@ -11,9 +11,10 @@ class MCSelect extends HTMLElement {
         let innerButtons = this.querySelectorAll("mc-button > button");
 
         for (let i=0;i<innerButtons.length;i++) {
+            innerButtons[i].disabled = this.getAttribute("disabled") || false;
             innerButtons[i].addEventListener("click", function () {
                 for (let j=0;j<innerButtons.length;j++) {
-                    innerButtons[j].id = null;
+                    innerButtons[j].id = "";
                 }
                 innerButtons[i].id = "selected";
             });
