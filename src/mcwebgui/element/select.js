@@ -6,9 +6,7 @@ class MCSelect extends HTMLElement {
 
         const text = this.innerHTML;
 
-        this.innerHTML = "<select><span class=\"text\"></span></select>";
-        let innerSelect = this.querySelector("select");
-        innerSelect.disabled = this.getAttribute("disabled");
+        this.innerHTML = "<mc-button></mc-button>".repeat(4);
     }
 }
 

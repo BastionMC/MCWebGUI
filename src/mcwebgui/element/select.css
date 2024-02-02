@@ -20,35 +20,30 @@ mc-select {
     user-select: none;
 }
 
-/* 
-
 mc-select {
     width: calc(var(--width) * var(--pixel-size));
     max-width: calc(var(--width) * var(--pixel-size));
-    height: calc(24px * var(--pixel-size));
+    height: calc(30px * var(--pixel-size));
     max-height: calc(var(--width) * var(--pixel-size));
 
     border: none;
     padding: 0px;
-}
-mc-select > select {
-    width: 100%;
-    height: 100%;
 
-    padding: 0px;
-    
     display: flex;
-    justify-content: center;
-
-    border-width: calc(4px * var(--pixel-size));
-    border-image: var(--normal) 4;
-
-    background-image: var(--normal);
-    background-position-x: calc((var(--width) * -1) * var(--pixel-size));
-    background-position-y: calc((var(--width) * -1) * var(--pixel-size));
-    background-size: calc((var(--width) * 3) * var(--pixel-size));
-    background-repeat: repeat;
 }
+mc-select > mc-button {
+    --width: 100%;
+    height: 100%;
+    
+    /* margin-left: calc(-0.5px * var(--pixel-size)); */
+    /* margin-right: calc(-0.5px * var(--pixel-size)); */
+}
+mc-select > mc-button > button {
+    border-image: var(--normal) 4;
+    background-image: var(--normal);
+}
+
+/* 
 
 mc-select > select > span.text {
     font-family: "mc-seven";
