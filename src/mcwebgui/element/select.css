@@ -56,6 +56,21 @@ mc-select > mc-button > button#selected > span.text {
     transform: translateY(calc(5px * var(--pixel-size)));
 }
 
+mc-select > mc-button > button > span.line {
+    position: absolute;
+    display: none;
+
+    background-color: white;
+
+    width: calc(12px * var(--pixel-size));
+    height: calc(1px * var(--pixel-size));
+
+    transform: translateY(calc(18px * var(--pixel-size)));
+}
+mc-select > mc-button > button#selected > span.line {
+    display: block;
+}
+
 mc-select[color|="dark"] > mc-button > button {
     --normal: var(--dark);
     --normal-hover: var(--dark-hover);
@@ -89,4 +104,7 @@ mc-select[tall|="true"] > mc-button > button:disabled:active > span.text {
 }
 mc-select[tall|="true"] > mc-button > button#selected > span.text {
     transform: translateY(calc(8px * var(--pixel-size)));
+}
+mc-select[tall="true"] > mc-button > button > span.line {
+    transform: translateY(calc(24px * var(--pixel-size)));
 }
