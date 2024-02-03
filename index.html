@@ -77,36 +77,12 @@
 
     <divider></divider>
 
-    <mc-select selected="1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </mc-select>
-    <mc-select selected="2" tall="true">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </mc-select>
-    <mc-select selected="3" color="dark">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </mc-select>
-    <mc-select selected="2" color="dark" tall="true">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </mc-select>
-    <mc-select selected="1" disabled="true">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </mc-select>
-    <mc-select selected="2" disabled="true" tall="true">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </mc-select>
+    <mc-select selected="1"></mc-select>
+    <mc-select selected="2" tall="true"></mc-select>
+    <mc-select selected="3" color="dark"></mc-select>
+    <mc-select selected="2" color="dark" tall="true"></mc-select>
+    <mc-select selected="1" disabled="true"></mc-select>
+    <mc-select selected="2" disabled="true" tall="true"></mc-select>
 
     <divider></divider>
 
@@ -120,7 +96,7 @@
     <script>
         const TFPixelSlider = document.getElementById("TF-PIXEL-SLIDER");
         const TFPixelText = document.getElementById("TF-PIXEL-TEXT");
-        
+
         TFPixelSlider.addEventListener("mouseup", function () {
             MCWebGUI.SetPixelSize(TFPixelSlider.getValue());
             TFPixelText.textContent = "Pixel size (Might be scuffed): " + MCWebGUI.GetPixelSize();
