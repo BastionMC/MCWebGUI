@@ -6,8 +6,6 @@ MCWebGUI.Element.Button.GenerateCSS = function () {
     for (let i=0;i<colors.length;i++) {
         MCWebGUI.GeneratedCSS.textContent += `mc-button[color|="${colors[i]}"]{--normal:url("../../../assets/button/${colors[i]}.png");--hover:url("../../../assets/button/${colors[i]}_hover.png");--active:url("../../../assets/button/${colors[i]}_active.png");}`
     };
-    
-    MCWebGUI.Log("Elements › Button", "gray", "Generated Button Color CSS.");
 };
 
 MCWebGUI.Element.Button.GenerateCSS();

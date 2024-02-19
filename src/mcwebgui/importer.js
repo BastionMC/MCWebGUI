@@ -14,10 +14,6 @@ await fetch("src/mcwebgui/import.json")
     MCWebGUIImporterList = data;
 });
 
-if (MCWebGUIImporter.Desktop) {
-    MCWebGUILog("Importer", "#3c8527", "Loading in Desktop-associated files.");
-};
-
 for (let i=0; i<MCWebGUIImporterList.scripts.length; i++) {
     let script = document.createElement("script");
     script.src = MCWebGUIImporterList.scripts[i];
