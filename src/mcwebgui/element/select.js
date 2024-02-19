@@ -50,4 +50,11 @@ MCSelect.prototype.getDisabled = function () {
     return this.querySelector("button").disabled || false;
 };
 
+MCSelect.prototype.setOptions = function () {
+
+};
+MCSelect.prototype.getOptions = function () {
+
+};
+
 customElements.define("mc-select", MCSelect);

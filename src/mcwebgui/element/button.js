@@ -1,8 +1,8 @@
 MCWebGUI.Element.Button = {};
 
-MCWebGUI.Element.Button.GenerateCSS = function () {
-    const colors = ["green", "red", "purple", "dark"];
+const colors = ["green", "red", "purple", "dark", "bland"];
 
+MCWebGUI.Element.Button.GenerateCSS = function () {
     for (let i=0;i<colors.length;i++) {
         MCWebGUI.GeneratedCSS.textContent += `mc-button[color|="${colors[i]}"]{--normal:url("../../../assets/button/${colors[i]}.png");--hover:url("../../../assets/button/${colors[i]}_hover.png");--active:url("../../../assets/button/${colors[i]}_active.png");}`
     };
@@ -42,6 +42,19 @@ MCButton.prototype.setDisabled = function (disabled) {
 };
 MCButton.prototype.getDisabled = function () {
     return this.querySelector("button").disabled || false;
+};
+
+MCButton.prototype.setColor = function (color) {
+    if (colors.includes(color)) {
+        this.setAttribute("color", color);
+    } else if (color == "default") {
+        this.removeAttribute("color");
+    } else {
+        MCWebGUI.Error("Error", `Tried to change button color, but recieved invalid color id of "${color}".`);
+    };
+};
+MCButton.prototype.getColor = function () {
+    return this.getAttribute("color") || "default";
 };
 
 customElements.define("mc-button", MCButton);

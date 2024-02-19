@@ -15,7 +15,7 @@ await fetch("src/mcwebgui/import.json")
 });
 
 if (MCWebGUIImporter.Desktop) {
-    MCWebGUILog("Importer", "orange", "Loading in Desktop-associated files.");
+    MCWebGUILog("Importer", "#3c8527", "Loading in Desktop-associated files.");
 };
 
 for (let i=0; i<MCWebGUIImporterList.scripts.length; i++) {
