@@ -11,7 +11,6 @@ MCWebGUI.LogStyle.Chip = `
     border-color: #00000064;
     border-width: 0px;
     border-bottom-width: 4px;
-    margin-bottom: 8px;
 `;
 MCWebGUI.LogStyle.Text = `
     margin-top: 12px;

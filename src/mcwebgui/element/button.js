@@ -48,11 +48,19 @@ MCButton.prototype.setColor = function (color) {
     } else if (color == "default") {
         this.removeAttribute("color");
     } else {
-        MCWebGUI.Error("Error", `Tried to change button color, but recieved invalid color id of "${color}".`);
+        MCWebGUI.Error("Error", `Tried to change button color, but recieved invalid color id of "${color}".
+You can read the documentation here, if you want to look at the list of all valid button colors:
+https://bastionmc.github.io/redirect/#XXXXXX/ (Link doesn't work yet, as Bookshelf isn't done.)`);
     };
 };
 MCButton.prototype.getColor = function () {
     return this.getAttribute("color") || "default";
+};
+MCButton.prototype.setTall = function (tall) {
+    this.setAttribute("color", tall);
+};
+MCButton.prototype.getTall = function () {
+    return this.getAttribute("tall") || false;
 };
 
 customElements.define("mc-button", MCButton);
