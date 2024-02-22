@@ -50,7 +50,7 @@ MCButton.prototype.setColor = function (color) {
     } else {
         MCWebGUI.Error("Error", `Tried to change button color, but recieved invalid color id of "${color}".
 You can read the documentation here, if you want to look at the list of all valid button colors:
-https://bastionmc.github.io/redirect/#XXXXXX/ (Link doesn't work yet, as Bookshelf isn't done.)`);
+https://bastionmc.github.io/redirect/#XXXXXX/ (Link will work once bookshelf is done)`);
     };
 };
 MCButton.prototype.getColor = function () {
